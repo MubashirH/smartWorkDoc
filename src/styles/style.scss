@@ -1,0 +1,15 @@
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+@import "variables";
+
+@import "layout";
+@import "navbar";
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap');
+
+* {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+body {
+    background-color: #f7f7f7;
+}

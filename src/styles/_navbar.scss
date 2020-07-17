@@ -1,0 +1,42 @@
+#site-navbar {
+  height: 100%;
+  background-color: white;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  span {
+    color: rgba(117,117,117,0.8);
+    &:hover {
+      color: grey;
+    }
+  }
+}
+
+.header {
+  border-bottom: 1px solid grey;
+  background-color: white;
+  img { height: 100% !important; margin: 10px;}
+  .btn {
+    border-color: #71ac34;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 0 5px;
+    &:nth-of-type(1) {
+      color: #71ac34;
+      background-color: transparent;
+      &:hover {
+        color: white;
+        background-color: #71ac34;
+      }
+    }
+    &:nth-of-type(2) {
+      color: white;
+      background-color: #71ac34;
+      &:hover {
+        color: #71ac34;
+        background-color: white;
+      }
+    }
+  }
+}
