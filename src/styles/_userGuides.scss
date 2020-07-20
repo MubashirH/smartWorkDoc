@@ -1,0 +1,18 @@
+.user-guide {
+    padding: 10%;
+    border: 2px solid #e5e5e5;
+    background-color: white;
+    height: 100%;
+    position: relative;
+    top: 0;
+    h4, p { color: rgb(38, 41, 44); }
+    &:hover {
+        box-shadow: rgba(38, 41, 44, 0.12) 0px 2px 8px 0px;
+        top: -7px;
+        transition: all 250ms ease-in-out;
+        cursor: pointer;
+    }
+
+}
+
+.side-menu { overflow-y: scroll; overflow-wrap: break-word;}

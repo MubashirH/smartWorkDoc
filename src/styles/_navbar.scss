@@ -14,13 +14,16 @@
 }
 
 .header {
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid #d6d6d6;
   background-color: white;
   img { height: 100% !important; margin: 10px;}
   .btn {
     border-color: #71ac34;
     border-radius: 5px;
     padding: 10px;
+    font-size: 13px;
+    letter-spacing: 1.7px;
+    font-weight: 600;
     margin: 0 5px;
     &:nth-of-type(1) {
       color: #71ac34;

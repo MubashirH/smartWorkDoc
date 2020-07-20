@@ -10,15 +10,21 @@ module.exports = {
     {
       resolve: `gatsby-source-wordpress`,
       options: {
-        baseUrl: `www.worksmart.net/user-guides`,
+        baseUrl: `www.worksmart.net`,
         protocol: `https`,
-        auth: {
-          htaccess_user: "mubashirh",
-          htaccess_pass: "vOsV3$pu@ISWJM^GVBW14coz",
-          htaccess_sendImmediately: false
-        },
+        // auth: {
+        //   htaccess_user: "mubashirh",
+        //   htaccess_pass: "vOsV3$pu@ISWJM^GVBW14coz",
+        //   htaccess_sendImmediately: false
+        // },
         hostingWPCOM: false,
-        useACF: false
+        useACF: true,
+        type: {
+          Page: { exclude: true},
+          Post: { exclude: true},
+          Media: { exclude: true},
+          blocks: { exclude: true}
+        }
       }
 
     },

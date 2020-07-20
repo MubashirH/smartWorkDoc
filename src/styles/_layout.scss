@@ -13,26 +13,29 @@ a.link-no-style {
   }
 }
 
-.footer-col {
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  align-items: center;
-  footer {
-    display: flex;
-    position: relative;
-    bottom: 0;
-    margin-top: -60px;
-    height: 60px;
-    clear: both;
-    background-color: $color-primary;
-    color: white;
-    justify-content: center;
-    width: 100%;
 
-    span {
-      align-self: center;
-      text-align: center;
+.footer {
+  background-color: #f9fafa;
+  border-top: 1px solid #f1f2f3;
+  padding: 5% 2%;
+  p{ color: #757575;}
+  ul {
+    list-style: none;
+    padding: 0;
+    a { color: #757575; text-decoration: none; margin-top: 20px;}
+  }
+  .btn {
+    border-color: #71ac34;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 0 5px;
+    font-size: 13px;
+    letter-spacing: 1.7px;
+    font-weight: 600;
+    background-color: #71ac34;
+    &:hover {
+      background-color: white;
+      color: #71ac34;
     }
   }
 }

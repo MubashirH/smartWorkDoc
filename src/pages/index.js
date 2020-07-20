@@ -1,5 +1,5 @@
 import React from "react"
-import { Row, Col, Container, ListGroup, Form, FormControl } from "react-bootstrap"
+import { Row, Container } from "react-bootstrap"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -9,22 +9,9 @@ const IndexPage = () => (
     <SEO title="Home" keywords={[`gatsby`, `react`, `bootstrap`]} />
     <Container>
       <Row>
-        <Col>
-          <h1>User Guides</h1>
-        </Col>
-        <Col >
-          <Form className="justify-content-end" inline onSubmit={e => e.preventDefault()}>
-            <Form.Group>
-              <FormControl
-                type="text"
-                placeholder="Search"
-                className="mr-2"
-              />
-            </Form.Group>
-          </Form>
-        </Col>
+        
       </Row>
-      <Row className="justify-content-center my-3">
+      {/* <Row className="justify-content-center my-3">
         <Col md="6">
           <ListGroup>
             <ListGroup.Item
@@ -57,20 +44,7 @@ const IndexPage = () => (
             </ListGroup.Item>
           </ListGroup>
         </Col>
-      </Row>
-      <Row>
-        <Col>
-          <p>
-            This starter also includes a navbar that sticks to the top of the
-            screen when the user scrolls past it, and a footer that stays at the
-            bottom of the screen.
-          </p>
-          <p>
-            For more documentation on these packages and how they work, please
-            refer to the pages linked in the list above.
-          </p>
-        </Col>
-      </Row>
+      </Row> */}
     </Container>
   </Layout>
 )
