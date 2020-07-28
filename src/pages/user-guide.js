@@ -3,6 +3,7 @@ import { Row, Col, Container, Form, FormControl } from "react-bootstrap"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Documentation from "../components/documents"
 
 
 // const userGuide = ({data}) => (
@@ -58,6 +59,9 @@ export default function UserGuide({ data }) {
                                     </Col>
                                     // : null
                             ))}
+                        </Row>
+                        <Row>
+                            <Documentation/>
                         </Row>
                     </Col>
                 </Row>
