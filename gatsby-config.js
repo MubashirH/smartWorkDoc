@@ -19,12 +19,16 @@ module.exports = {
         // },
         hostingWPCOM: false,
         useACF: true,
-        type: {
-          Page: { exclude: true},
-          Post: { exclude: true},
-          Media: { exclude: true},
-          blocks: { exclude: true}
-        }
+        includedRoutes: [
+          // "**/categories",
+          // "**/posts",
+          // "**/pages",
+          // "**/media",
+          // "**/tags",
+          // "**/taxonomies",
+          // "**/users",
+          "**/manual_documentation",
+        ]
       }
 
     },
