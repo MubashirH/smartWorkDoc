@@ -54,7 +54,7 @@ const Layout = ({ children, pageInfo }) => (
               <ul>
                 <li><a href="https://www.worksmart.net/about-us/" target="blank">Corporate Overview</a></li>
                 <li><a href="https://www.worksmart.net/contact-us/" target="blank">Contact Us</a></li>
-                <li><a href="" target="blank">Developers</a></li>
+                <li><a href="https://www.worksmart.net/contact-us/" target="blank">Developers</a></li>
                 <li><a href="https://www.worksmart.net/terms-of-use/" target="blank">Terms of Use</a></li>
                 <li><a href="https://www.worksmart.net/trust/" target="blank">Trust © worksmart</a></li>
               </ul>

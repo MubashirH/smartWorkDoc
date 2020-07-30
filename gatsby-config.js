@@ -28,6 +28,7 @@ module.exports = {
           // "**/taxonomies",
           // "**/users",
           "**/manual_documentation",
+          "**/docs-tree",
         ]
       }
 

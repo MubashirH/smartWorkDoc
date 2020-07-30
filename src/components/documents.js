@@ -19,8 +19,6 @@ const Documentation = (wpId) => (
     <Query query={DOC_QUERY} variables={{id: wpId.wordpress_id}} skip={!wpId} >
         {
             ({loading, error, data}) => {
-                console.log(data);
-                console.log(wpId.wordpress_id);
                 if (loading) return <p>"Loading..."</p>;
                 if (error) return <p>Error --- {console.log(error)}</p>;
                 if (data) return (

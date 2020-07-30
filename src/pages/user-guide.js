@@ -17,26 +17,24 @@ const client = new ApolloClient({
     cache: new InMemoryCache()
 });
 
-let wordpress_id = 0 ;
-let currentParams = new URLSearchParams(window.location.search)
-
-function guideClicked(data) {
-    let path = window.location.pathname
-    wordpress_id = data;
-    currentParams.set('pageId', data);
-    navigate(`?pageId=${data}`)
-    console.log(data, path, currentParams)
-    // value()
-}
-
 export default function UserGuide({ data }) {
+    
+    let currentParams = new URLSearchParams(window.location.search)
+    let params = currentParams.get('pageId');
+    
+    function guideClicked(data, event) {
+        console.log(data);
+        event.stopPropagation();
+        if (event.target.children.length !== 0) {
+            event.target.children[0].className === 'collapse' ? 
+                    event.target.children[0].classList.remove('collapse') : event.target.children[0].classList.add('collapse')
+        }
+        params = data;
+        navigate(`?pageId=${data}`);
+        currentParams.set('pageId', data);
+    }
 
-    // constructor(props) {
-    //     super(props)
-    //     this.state = {isClicked: false};
-    // }
 
-    // console.log(data)
     return (
         <ApolloProvider client={client}>
         <Layout pageInfo={{ pageName: "user-guide" }}>
@@ -61,31 +59,66 @@ export default function UserGuide({ data }) {
             </Container>
             <Container fluid className="mt-5">
                 <Row>
-                    <Col md={3}>
+                    <Col md={3} className="side-menu">
                         <ul>
                         {data.allWordpressWpManualDocumentation.edges.map(r => (
-                                <li onClick={() => guideClicked(r.node.wordpress_id)}>{r.node.title}</li>
+                                r.node.parent_element === null ?
+                                <>
+                                <li onClick={(event) => guideClicked(r.node.wordpress_id, event)}>{r.node.title}
+                                <ul className="collapse">
+                                { data.allWordpressWpManualDocumentation.edges.map(sub1 => (
+                                        sub1.node.parent_element != null ?
+                                        sub1.node.parent_element.wordpress_id === r.node.wordpress_id ?
+                                        <>
+                                            <li onClick={(event) => guideClicked(sub1.node.wordpress_id, event)}>{sub1.node.title}
+                                                <ul className="collapse">
+                                                    { data.allWordpressWpManualDocumentation.edges.map(sub2 => (
+                                                        sub2.node.parent_element != null ?
+                                                        sub2.node.parent_element.wordpress_id === sub1.node.wordpress_id ? 
+                                                            <>
+                                                                <li onClick={(event) => guideClicked(sub2.node.wordpress_id, event)}>{sub2.node.title}
+                                                                    <ul className="collapse">
+                                                                        { data.allWordpressWpManualDocumentation.edges.map( sub3 => (
+                                                                            sub3.node.parent_element != null ? 
+                                                                            sub3.node.parent_element.wordpress_id === sub2.node.wordpress_id ?
+                                                                                <><li onClick={(event) => guideClicked(sub3.node.wordpress_id, event)}>{sub3.node.title}</li></>
+                                                                            : null : null                                                                           
+                                                                        ))}
+                                                                    </ul>
+                                                                </li>
+                                                            </>
+                                                        : null : null
+                                                    ))}
+                                                </ul>
+                                            </li>
+                                        </>  
+                                        : null
+                                        : null
+                                    ))}
+                                </ul></li>
+                                </>
+                                : null
                         ))}
                         </ul>
                     </Col>
                     <Col md={9}>
-                        { wordpress_id === 0 ? 
+                        { params === null ? 
                         <Row>
                             {data.allWordpressWpManualDocumentation.edges.map(r => (
-                                // r.node.wordpress_parent === 0 ?
+                                r.node.wordpress_parent === 0 ?
                                     <Col md={4} sm={3} className="mb-4">
-                                        <div className="user-guide" onClick={() => guideClicked(r.node.wordpress_id)}>
+                                        <div className="user-guide" onClick={(event) => guideClicked(r.node.wordpress_id, event)}>
                                             <div className="guideImage"></div>
                                             <h4>{r.node.title}</h4>
                                             <p>{r.node.uagb_excerpt}</p>
                                         </div>
                                     </Col>
-                                    // : null
+                                    : null
                             ))}
                         </Row> :
                         <Row>
-                            <Col>
-                                <Documentation wordpress_id={wordpress_id}/>
+                            <Col className="pl-5">
+                                <Documentation wordpress_id={+params}/>
                             </Col>
                         </Row> }
                     </Col>
@@ -100,14 +133,17 @@ export default function UserGuide({ data }) {
 
 export const query = graphql`
     query MyQuery {
-        allWordpressWpManualDocumentation(sort: {fields: wordpress_id}, filter: {wordpress_parent: {eq: 0}}) {
+        allWordpressWpManualDocumentation(sort: {fields: wordpress_id}) {
             edges {
               node {
                 id
                 wordpress_id
                 title
                 uagb_excerpt
-                
+                wordpress_parent
+                parent_element {
+                    wordpress_id 
+                }
               }
             }
           }
