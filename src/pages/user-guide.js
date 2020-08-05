@@ -2,24 +2,23 @@ import React from "react"
 import { Row, Col, Container, Form, FormControl } from "react-bootstrap"
 import { navigate } from '@reach/router'
 import { graphql } from 'gatsby'
-import $ from 'jquery'
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Documentation from "../components/documents"
+import Content from "../components/content"
 
-import { ApolloClient } from "apollo-client";
-import { HttpLink, InMemoryCache } from "apollo-boost";
-import { ApolloProvider } from "react-apollo"
-import fetch from 'cross-fetch';
+// import { ApolloClient } from "apollo-client";
+// import { HttpLink, InMemoryCache } from "apollo-boost";
+// import { ApolloProvider } from "react-apollo"
+// import fetch from 'cross-fetch';
 
 
-const client = new ApolloClient({
-    link: new HttpLink({
-        uri: "http://127.0.0.1:9000/___graphql", fetch,
-    }),
-    cache: new InMemoryCache()
-});
+// const client = new ApolloClient({
+//     link: new HttpLink({
+//         uri: "/___graphql", fetch,
+//     }),
+//     cache: new InMemoryCache()
+// });
 
 
 export default function UserGuide({ data }) {
@@ -50,8 +49,8 @@ export default function UserGuide({ data }) {
             currentParams.set('pageId', data);
         }
         return (
-            <ApolloProvider client={client}>
-                {
+            // <ApolloProvider client={client}>
+            //     {
             <Layout pageInfo={{ pageName: "user-guide" }}>
                 <SEO title="User Guide" />
                 <Container fluid  >
@@ -133,15 +132,15 @@ export default function UserGuide({ data }) {
                                 </Row> :
                                 <Row>
                                     <Col className="pl-5">
-                                        <Documentation wordpress_id={+params}/>
+                                        <Content wordpress_id={+params}/>
                                     </Col>
                                 </Row> }
                             </Col>
                     </Row>
                 </Container>
             </Layout>
-            }
-            </ApolloProvider>
+            // }
+            // </ApolloProvider>
         )
     }
     else {
