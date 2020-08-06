@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import { Row, Col, Container, Form, FormControl } from "react-bootstrap"
 import { navigate } from '@reach/router'
 import { graphql } from 'gatsby'
@@ -7,34 +7,36 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Content from "../components/content"
 
-// import { ApolloClient } from "apollo-client";
-// import { HttpLink, InMemoryCache } from "apollo-boost";
-// import { ApolloProvider } from "react-apollo"
-// import fetch from 'cross-fetch';
+import fetch from 'cross-fetch';
 
 
-// const client = new ApolloClient({
-//     link: new HttpLink({
-//         uri: "/___graphql", fetch,
-//     }),
-//     cache: new InMemoryCache()
-// });
 
 
 export default function UserGuide({ data }) {
     const isBr = typeof window !== `undefined`
+
+    //Fetching the Doc Tree from doc API
+    const [appState, setAppState] = useState({
+        loading: false,
+        repos: null
+    });
+    useEffect( () => {
+        setAppState({ loading: true });
+        fetch("https://www.worksmart.net/wp-json/worksmart-custom/v1/docs-tree")
+        .then((res) => res.json()) 
+        .then((result)=> {setAppState({loading: false, repos: result})});
+    }, [setAppState]);
+
+
     if (isBr) {
-        // let child = document.getElementsByClassName('collapse')
-        // child.parent('li').classList.add('head');
-        // // if ( $('.collapse').is(':empty') ) {
-        //     // $('.collapse').parent('li').addClass('head')
-        // // }
+        let searchValue = 2;
+        console.log(appState.repos)
         let currentParams = new URLSearchParams(window.location.search)
         let params = currentParams.get('pageId');
 
-        function guideClicked(data, event) {
-            console.log(data);
+        function guideClicked(event, data) {
             event.stopPropagation();
+            console.log(data[0])
             if (event.target.children.length !== 0) {
                 if ( event.target.children[0].className === 'collapse' ) {
                     event.target.children[0].classList.remove('collapse')
@@ -44,13 +46,11 @@ export default function UserGuide({ data }) {
                     event.target.children[0].classList.add('collapse')
                 }
             }
-            params = data;
+            params = data[0];
             navigate(`?pageId=${data}`);
             currentParams.set('pageId', data);
         }
         return (
-            // <ApolloProvider client={client}>
-            //     {
             <Layout pageInfo={{ pageName: "user-guide" }}>
                 <SEO title="User Guide" />
                 <Container fluid  >
@@ -74,73 +74,69 @@ export default function UserGuide({ data }) {
                 <Container fluid className="mt-5">
                     <Row>
                         <Col md={3} className="side-menu">
-                            <ul>
-                            {data.allWordpressWpManualDocumentation.edges.map(r => (
-                                    r.node.parent_element === null ?
-                                    <>
-                                    <li className="list-head" onClick={(event) => guideClicked(r.node.wordpress_id, event)}>{r.node.title}
-                                    <ul className="collapse">
-                                    { data.allWordpressWpManualDocumentation.edges.map(sub1 => (
-                                            sub1.node.parent_element != null ?
-                                            sub1.node.parent_element.wordpress_id === r.node.wordpress_id ?
-                                            <>
-                                                <li className="list-head" onClick={(event) => guideClicked(sub1.node.wordpress_id, event)}>{sub1.node.title}
-                                                    <ul className="collapse">
-                                                        { data.allWordpressWpManualDocumentation.edges.map(sub2 => (
-                                                            sub2.node.parent_element != null ?
-                                                            sub2.node.parent_element.wordpress_id === sub1.node.wordpress_id ? 
-                                                                <>
-                                                                    <li className="list-head" onClick={(event) => guideClicked(sub2.node.wordpress_id, event)}>{sub2.node.title}
-                                                                        <ul className="collapse">
-                                                                            { data.allWordpressWpManualDocumentation.edges.map( sub3 => (
-                                                                                sub3.node.parent_element != null ? 
-                                                                                sub3.node.parent_element.wordpress_id === sub2.node.wordpress_id ?
-                                                                                    <><li onClick={(event) => guideClicked(sub3.node.wordpress_id, event)}>{sub3.node.title}</li></>
-                                                                                : null : null                                                                           
-                                                                            ))}
-                                                                        </ul>
-                                                                    </li>
-                                                                </>
-                                                            : null : null
-                                                        ))}
-                                                    </ul>
-                                                </li>
-                                            </>  
-                                            : null
-                                            : null
-                                        ))}
-                                    </ul></li>
-                                    </>
-                                    : null
-                            ))}
-                            </ul>
-                        </Col>
-                            <Col md={9}>
-                                { params === null ? 
-                                <Row>
-                                    {data.allWordpressWpManualDocumentation.edges.map(r => (
-                                        r.node.wordpress_parent === 0 ?
-                                            <Col md={4} sm={3} className="mb-4">
-                                                <div className="user-guide" onClick={(event) => guideClicked(r.node.wordpress_id, event)}>
-                                                    <div className="guideImage"></div>
-                                                    <h4>{r.node.title}</h4>
-                                                    <p>{r.node.uagb_excerpt}</p>
-                                                </div>
-                                            </Col>
-                                            : null
+                            { appState.repos != null ? 
+                                <ul>
+                                    {appState.repos.documentation_tree.li.map( (res) => (
+                                        <li className="list-head" onClick={(event) => guideClicked(event, res["@attributes"].class.match(/\d+/))}>{res.a}
+                                            {res.ul ? 
+                                                <ul className="collapse">
+                                                    {res.ul.li.length > 1 ? 
+                                                        res.ul.li.map((sub1) => (
+                                                            <li className="list-head" onClick={(event) => guideClicked(event, sub1["@attributes"].class.match(/\d+/))}>{sub1.a}
+                                                                {sub1.ul ? 
+                                                                    <ul className="collapse">
+                                                                        {sub1.ul.li.length > 1 ? 
+                                                                            sub1.ul.li.map((sub2) => (
+                                                                                <li className="list-head" onClick={(event) => guideClicked(event, sub2["@attributes"].class.match(/\d+/))}>{sub2.a}
+                                                                                    {sub2.ul ? 
+                                                                                        <ul className="collapse">
+                                                                                            {sub2.ul.li.length > 1 ?
+                                                                                                sub2.ul.li.map((sub3) => (
+                                                                                                    <li onClick={(event) => guideClicked(event, sub3["@attributes"].class.match(/\d+/))}>{sub3.a}</li>
+                                                                                                ))
+                                                                                            :null}
+                                                                                        </ul>
+                                                                                    : null}
+                                                                                </li>
+                                                                            ))
+                                                                        : null}
+                                                                    </ul>
+                                                                : null}
+                                                            </li>
+                                                        )) 
+                                                    : null}
+                                                </ul>
+                                            : null }
+                                        </li>
+                                        
                                     ))}
-                                </Row> :
-                                <Row>
-                                    <Col className="pl-5">
-                                        <Content wordpress_id={+params}/>
-                                    </Col>
-                                </Row> }
-                            </Col>
+                                </ul>
+                            : null}
+                        </Col>
+                        <Col md={9}>
+                            { params === null ? 
+                            <Row>
+                                {data.allWordpressWpManualDocumentation.edges.map(r => (
+                                    r.node.wordpress_parent === 0 ?
+                                        <Col md={4} sm={3} className="mb-4">
+                                            <div className="user-guide" onClick={(event) => guideClicked(event, r.node.wordpress_id)}>
+                                                <div className="guideImage"></div>
+                                                <h4>{r.node.title}</h4>
+                                                <p>{r.node.uagb_excerpt}</p>
+                                            </div>
+                                        </Col>
+                                        : null
+                                ))}
+                            </Row> :
+                            <Row>
+                                <Col className="pl-5">
+                                    <Content wordpress_id={+params}/>
+                                </Col>
+                            </Row> }
+                        </Col>
                     </Row>
                 </Container>
             </Layout>
-            // }
-            // </ApolloProvider>
         )
     }
     else {
@@ -152,6 +148,7 @@ export default function UserGuide({ data }) {
 
 
 }
+
 
 
 

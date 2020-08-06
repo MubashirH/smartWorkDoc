@@ -22,8 +22,7 @@ const Content = (wpId) => (
             }
         `}
         render= { data => (
-            <>
-            {filtering(data, wpId.wordpress_id)}
+            <>{filtering(data, wpId.wordpress_id)}
                 <div className="documentation">
                     <div dangerouslySetInnerHTML={{__html: result[0].node.content}}></div>
                 </div>
