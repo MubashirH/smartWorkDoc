@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react"
-import { Row, Col, Container, Form, FormControl } from "react-bootstrap"
+import { Row, Col, Container } from "react-bootstrap"
 import { navigate } from '@reach/router'
 import { graphql } from 'gatsby'
 
@@ -29,14 +29,22 @@ export default function UserGuide({ data }) {
 
 
     if (isBr) {
-        let searchValue = 2;
         console.log(appState.repos)
         let currentParams = new URLSearchParams(window.location.search)
-        let params = currentParams.get('pageId');
+        console.log(currentParams);
+        let idParams = currentParams.get('pageId');
+        let searchParams = currentParams.get('search');
+        // console.log(params)
+
+        function handleKeyPress (event) {
+            navigate(`?search=${event.target.value}`);
+            currentParams.set('search', event.target.value);
+            searchParams = event.target.value
+          }
+        
 
         function guideClicked(event, data) {
             event.stopPropagation();
-            console.log(data[0])
             if (event.target.children.length !== 0) {
                 if ( event.target.children[0].className === 'collapse' ) {
                     event.target.children[0].classList.remove('collapse')
@@ -46,7 +54,7 @@ export default function UserGuide({ data }) {
                     event.target.children[0].classList.add('collapse')
                 }
             }
-            params = data[0];
+            idParams = data[0];
             navigate(`?pageId=${data}`);
             currentParams.set('pageId', data);
         }
@@ -59,15 +67,18 @@ export default function UserGuide({ data }) {
                             <h1>User Guides</h1>
                         </Col>
                         <Col className="search">
-                            <Form className="justify-content-end" inline onSubmit={e => e.preventDefault()}>
+                            <div className="form">
+                                <input id="search" type="text" placeholder="Search Documentation..." className="mr-2" onKeyPress={(event) => handleKeyPress(event)}/>
+                            </div>
+                            {/* <Form className="justify-content-end" inline onSubmit={e => e.preventDefault()}>
                                 <Form.Group>
                                     <FormControl
                                         type="text"
                                         placeholder="Search Documentation..."
-                                        className="mr-2"
+                                        className="mr-2" 
                                     />
                                 </Form.Group>
-                            </Form>
+                            </Form> */}
                         </Col>
                     </Row>
                 </Container>
@@ -114,7 +125,7 @@ export default function UserGuide({ data }) {
                             : null}
                         </Col>
                         <Col md={9}>
-                            { params === null ? 
+                            { idParams === null && searchParams === null ? 
                             <Row>
                                 {data.allWordpressWpManualDocumentation.edges.map(r => (
                                     r.node.wordpress_parent === 0 ?
@@ -130,7 +141,7 @@ export default function UserGuide({ data }) {
                             </Row> :
                             <Row>
                                 <Col className="pl-5">
-                                    <Content wordpress_id={+params}/>
+                                    { idParams ? <Content wordpress_id={idParams}/> : <Content searchValue={searchParams}/> }
                                 </Col>
                             </Row> }
                         </Col>
