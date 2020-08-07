@@ -48,6 +48,7 @@ const Content = (wpId) => (
                     <>
                     {filtering(data, +wpId.wordpress_id)}
                         <div className="documentation">
+                            <h1>{result[0].node.title}</h1>
                             <div dangerouslySetInnerHTML={{__html: result[0].node.content}}></div>
                         </div>
                     </>

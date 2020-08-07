@@ -31,10 +31,8 @@ export default function UserGuide({ data }) {
     if (isBr) {
         console.log(appState.repos)
         let currentParams = new URLSearchParams(window.location.search)
-        console.log(currentParams);
         let idParams = currentParams.get('pageId');
         let searchParams = currentParams.get('search');
-        // console.log(params)
 
         function handleKeyPress (event) {
             navigate(`?search=${event.target.value}`);
@@ -68,7 +66,7 @@ export default function UserGuide({ data }) {
                         </Col>
                         <Col className="search">
                             <div className="form">
-                                <input id="search" type="text" placeholder="Search Documentation..." className="mr-2" onKeyPress={(event) => handleKeyPress(event)}/>
+                                <input id="search" type="text" placeholder="Search Documentation..." className="mr-2" onKeyDown={(event) => handleKeyPress(event)}/>
                             </div>
                             {/* <Form className="justify-content-end" inline onSubmit={e => e.preventDefault()}>
                                 <Form.Group>
@@ -88,22 +86,22 @@ export default function UserGuide({ data }) {
                             { appState.repos != null ? 
                                 <ul>
                                     {appState.repos.documentation_tree.li.map( (res) => (
-                                        <li className="list-head" onClick={(event) => guideClicked(event, res["@attributes"].class.match(/\d+/))}>{res.a}
+                                        <li id={res["@attributes"].class.match(/\d+/)} className="list-head" onClick={(event) => guideClicked(event, res["@attributes"].class.match(/\d+/))}>{res.a}
                                             {res.ul ? 
                                                 <ul className="collapse">
                                                     {res.ul.li.length > 1 ? 
                                                         res.ul.li.map((sub1) => (
-                                                            <li className="list-head" onClick={(event) => guideClicked(event, sub1["@attributes"].class.match(/\d+/))}>{sub1.a}
+                                                            <li id={sub1["@attributes"].class.match(/\d+/)} className="list-head" onClick={(event) => guideClicked(event, sub1["@attributes"].class.match(/\d+/))}>{sub1.a}
                                                                 {sub1.ul ? 
                                                                     <ul className="collapse">
                                                                         {sub1.ul.li.length > 1 ? 
                                                                             sub1.ul.li.map((sub2) => (
-                                                                                <li className="list-head" onClick={(event) => guideClicked(event, sub2["@attributes"].class.match(/\d+/))}>{sub2.a}
+                                                                                <li id={sub2["@attributes"].class.match(/\d+/)} className="list-head" onClick={(event) => guideClicked(event, sub2["@attributes"].class.match(/\d+/))}>{sub2.a}
                                                                                     {sub2.ul ? 
                                                                                         <ul className="collapse">
                                                                                             {sub2.ul.li.length > 1 ?
                                                                                                 sub2.ul.li.map((sub3) => (
-                                                                                                    <li onClick={(event) => guideClicked(event, sub3["@attributes"].class.match(/\d+/))}>{sub3.a}</li>
+                                                                                                    <li id={sub3["@attributes"].class.match(/\d+/)} onClick={(event) => guideClicked(event, sub3["@attributes"].class.match(/\d+/))}>{sub3.a}</li>
                                                                                                 ))
                                                                                             :null}
                                                                                         </ul>
