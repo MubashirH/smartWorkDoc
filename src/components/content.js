@@ -66,7 +66,7 @@ const Content = (wpId) => (
                                 </div>
                             : 
                                 <div className="searching">
-                                    <h3>Matching Results</h3>
+                                    <h3>Matching Results..</h3>
                                     {result.map( (res) => (
                                         <h3 className="mb-3" onClick={() => navigation(res.node.wordpress_id)}>- {res.node.title}</h3>
                                     ))}
