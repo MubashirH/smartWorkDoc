@@ -3,7 +3,6 @@ import { StaticQuery, graphql, navigate } from "gatsby"
 
 let result
 function filtering(data, id) {
-    console.log(isNaN(id))
     if (!isNaN(id)) {
         result = data.allWordpressWpManualDocumentation.edges.filter(res => res.node.wordpress_id === id)
     } 

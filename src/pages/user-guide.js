@@ -8,6 +8,7 @@ import SEO from "../components/seo"
 import Content from "../components/content"
 
 import fetch from 'cross-fetch';
+import $ from 'jquery';
 
 
 
@@ -24,15 +25,24 @@ export default function UserGuide({ data }) {
         setAppState({ loading: true });
         fetch("https://www.worksmart.net/wp-json/worksmart-custom/v1/docs-tree")
         .then((res) => res.json()) 
-        .then((result)=> {setAppState({loading: false, repos: result})});
+        .then((result)=> {
+            setAppState({loading: false, repos: result});
+            let cParams = new URLSearchParams(window.location.search)
+            let listId = cParams.get('pageId');
+            if (listId != null) { 
+                $(`#`+listId).children().removeClass('collapse').addClass('arrow');
+                $(`#`+listId).parents().removeClass('collapse').addClass('arrow');
+                $(`#`+listId).addClass('selected')
+            }
+        })
     }, [setAppState]);
 
 
     if (isBr) {
-        console.log(appState.repos)
         let currentParams = new URLSearchParams(window.location.search)
         let idParams = currentParams.get('pageId');
         let searchParams = currentParams.get('search');
+
 
         function handleKeyPress (event) {
             navigate(`?search=${event.target.value}`);
@@ -41,8 +51,17 @@ export default function UserGuide({ data }) {
           }
         
 
-        function guideClicked(event, data) {
+        function guideClicked(event, data, box) {
             event.stopPropagation();
+            $('li').removeClass('selected')
+            $(`#`+data).addClass('selected');
+            console.log(data)
+
+            if (!isNaN(box)) {
+                console.log(data)
+                $(`#`+data).children().removeClass('collapse')
+                $(`#`+data).children().addClass('arrow');
+            }
             if (event.target.children.length !== 0) {
                 if ( event.target.children[0].className === 'collapse' ) {
                     event.target.children[0].classList.remove('collapse')
@@ -52,7 +71,6 @@ export default function UserGuide({ data }) {
                     event.target.children[0].classList.add('collapse')
                 }
             }
-            idParams = data[0];
             navigate(`?pageId=${data}`);
             currentParams.set('pageId', data);
         }
@@ -68,15 +86,6 @@ export default function UserGuide({ data }) {
                             <div className="form">
                                 <input id="search" type="text" placeholder="Search Documentation..." className="mr-2" onKeyDown={(event) => handleKeyPress(event)}/>
                             </div>
-                            {/* <Form className="justify-content-end" inline onSubmit={e => e.preventDefault()}>
-                                <Form.Group>
-                                    <FormControl
-                                        type="text"
-                                        placeholder="Search Documentation..."
-                                        className="mr-2" 
-                                    />
-                                </Form.Group>
-                            </Form> */}
                         </Col>
                     </Row>
                 </Container>
@@ -86,22 +95,26 @@ export default function UserGuide({ data }) {
                             { appState.repos != null ? 
                                 <ul>
                                     {appState.repos.documentation_tree.li.map( (res) => (
-                                        <li id={res["@attributes"].class.match(/\d+/)} className="list-head" onClick={(event) => guideClicked(event, res["@attributes"].class.match(/\d+/))}>{res.a}
+                                        <li id={res["@attributes"].class.match(/\d+/)} className="list-head" 
+                                        onClick={(event) => guideClicked(event, res["@attributes"].class.match(/\d+/))}>{res.a}
                                             {res.ul ? 
                                                 <ul className="collapse">
                                                     {res.ul.li.length > 1 ? 
                                                         res.ul.li.map((sub1) => (
-                                                            <li id={sub1["@attributes"].class.match(/\d+/)} className="list-head" onClick={(event) => guideClicked(event, sub1["@attributes"].class.match(/\d+/))}>{sub1.a}
+                                                            <li id={sub1["@attributes"].class.match(/\d+/)} className="list-head" 
+                                                            onClick={(event) => guideClicked(event, sub1["@attributes"].class.match(/\d+/))}>{sub1.a}
                                                                 {sub1.ul ? 
                                                                     <ul className="collapse">
                                                                         {sub1.ul.li.length > 1 ? 
                                                                             sub1.ul.li.map((sub2) => (
-                                                                                <li id={sub2["@attributes"].class.match(/\d+/)} className="list-head" onClick={(event) => guideClicked(event, sub2["@attributes"].class.match(/\d+/))}>{sub2.a}
+                                                                                <li id={sub2["@attributes"].class.match(/\d+/)} className="list-head" 
+                                                                                onClick={(event) => guideClicked(event, sub2["@attributes"].class.match(/\d+/))}>{sub2.a}
                                                                                     {sub2.ul ? 
                                                                                         <ul className="collapse">
                                                                                             {sub2.ul.li.length > 1 ?
                                                                                                 sub2.ul.li.map((sub3) => (
-                                                                                                    <li id={sub3["@attributes"].class.match(/\d+/)} onClick={(event) => guideClicked(event, sub3["@attributes"].class.match(/\d+/))}>{sub3.a}</li>
+                                                                                                    <li id={sub3["@attributes"].class.match(/\d+/)} 
+                                                                                                    onClick={(event) => guideClicked(event, sub3["@attributes"].class.match(/\d+/))}>{sub3.a}</li>
                                                                                                 ))
                                                                                             :null}
                                                                                         </ul>
@@ -128,7 +141,7 @@ export default function UserGuide({ data }) {
                                 {data.allWordpressWpManualDocumentation.edges.map(r => (
                                     r.node.wordpress_parent === 0 ?
                                         <Col md={4} sm={3} className="mb-4">
-                                            <div className="user-guide" onClick={(event) => guideClicked(event, r.node.wordpress_id)}>
+                                            <div className="user-guide" onClick={(event) => guideClicked(event, r.node.wordpress_id, 1)}>
                                                 <div className="guideImage"></div>
                                                 <h4>{r.node.title}</h4>
                                                 <p>{r.node.uagb_excerpt}</p>
