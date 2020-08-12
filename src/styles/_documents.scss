@@ -2,7 +2,12 @@
     h1 { margin-bottom: 20px;}
     li { 
         padding: 5px 0;
-        font-size: 20px;
+        font-size: 20px; a {
+            pointer-events: none;
+            cursor: default;
+            text-decoration: none;
+            color: black;
+        }
     }
     p {
         padding-bottom: 10px;

@@ -15,6 +15,7 @@ import $ from 'jquery';
 
 export default function UserGuide({ data }) {
     const isBr = typeof window !== `undefined`
+    const childAttribute = "page_item_has_children" 
 
     //Fetching the Doc Tree from doc API
     const [appState, setAppState] = useState({
@@ -26,6 +27,7 @@ export default function UserGuide({ data }) {
         fetch("https://www.worksmart.net/wp-json/worksmart-custom/v1/docs-tree")
         .then((res) => res.json()) 
         .then((result)=> {
+            console.log(result);
             setAppState({loading: false, repos: result});
             let cParams = new URLSearchParams(window.location.search)
             let listId = cParams.get('pageId');
@@ -95,19 +97,19 @@ export default function UserGuide({ data }) {
                             { appState.repos != null ? 
                                 <ul>
                                     {appState.repos.documentation_tree.li.map( (res) => (
-                                        <li id={res["@attributes"].class.match(/\d+/)} className="list-head" 
+                                        <li id={res["@attributes"].class.match(/\d+/)} className={res["@attributes"].class.includes(childAttribute) ? "list-head": null}
                                         onClick={(event) => guideClicked(event, res["@attributes"].class.match(/\d+/))}>{res.a}
                                             {res.ul ? 
                                                 <ul className="collapse">
                                                     {res.ul.li.length > 1 ? 
                                                         res.ul.li.map((sub1) => (
-                                                            <li id={sub1["@attributes"].class.match(/\d+/)} className="list-head" 
+                                                            <li id={sub1["@attributes"].class.match(/\d+/)} className={sub1["@attributes"].class.includes(childAttribute) ? "list-head": null}
                                                             onClick={(event) => guideClicked(event, sub1["@attributes"].class.match(/\d+/))}>{sub1.a}
                                                                 {sub1.ul ? 
                                                                     <ul className="collapse">
                                                                         {sub1.ul.li.length > 1 ? 
                                                                             sub1.ul.li.map((sub2) => (
-                                                                                <li id={sub2["@attributes"].class.match(/\d+/)} className="list-head" 
+                                                                                <li id={sub2["@attributes"].class.match(/\d+/)} className={sub2["@attributes"].class.includes(childAttribute) ? "list-head": null} 
                                                                                 onClick={(event) => guideClicked(event, sub2["@attributes"].class.match(/\d+/))}>{sub2.a}
                                                                                     {sub2.ul ? 
                                                                                         <ul className="collapse">

@@ -1,0 +1,2679 @@
+<div id="support_content" class="support_content">
+   <p>&nbsp;</p>
+   <p>&nbsp;</p>
+   <p>&nbsp;</p>
+   <p>&nbsp;</p>
+   <table id="language_reference" width="100%" cellspacing="3" cellpadding="2">
+      <tbody>
+         <tr>
+            <td class="group_name" colspan="4"><a class="open_icon">Text Functions (9)</a></td>
+         </tr>
+         <tr class="function_list" >
+            <th nowrap="nowrap">Name</th>
+            <th nowrap="nowrap">Arguments</th>
+            <th nowrap="nowrap">Return</th>
+            <th nowrap="nowrap">Description</th>
+         </tr>
+         <tr class="function_list" >
+            <td class="function_name">Chr</td>
+            <td>NUMBER ascii_code</td>
+            <td>TEXT</td>
+            <td>Returns a one-character text value containing the character specified by ascii.</td>
+         </tr>
+         <tr class="function_explaination" >
+            <td colspan="4">
+               <div class="container">
+                  <div class="heading" style="overflow: hidden;">
+                     <div style="float: left;">Chr</div>
+                     <div class="close_function" style="float: right; margin-right: 5px;">Close</div>
+                     <p>&nbsp;</p>
+                  </div>
+                  <table cellspacing="3" cellpadding="2">
+                     <tbody>
+                        <tr>
+                           <td class="function_label" style="border-top: 0px;">Category:</td>
+                           <td class="function_details" style="border-top: 0px;">Text Functions</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Name:</td>
+                           <td class="function_details">Chr</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Arguments:</td>
+                           <td class="function_details">NUMBER ascii_code</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Return Type:</td>
+                           <td class="function_details">TEXT</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Description:</td>
+                           <td class="function_details">Returns a one-character text value containing the character<br>specified by ascii.</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Examples:</td>
+                           <td class="function_details">Chr(65) will return "A"</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </td>
+         </tr>
+         <tr class="function_list" >
+            <td class="function_name">ConCat</td>
+            <td>&nbsp;</td>
+            <td>TEXT</td>
+            <td>Returns the merged text value of all the arguments.</td>
+         </tr>
+         <tr class="function_explaination" >
+            <td colspan="4">
+               <div class="container">
+                  <div class="heading" style="overflow: hidden;">
+                     <div style="float: left;">ConCat</div>
+                     <div class="close_function" style="float: right; margin-right: 5px;">Close</div>
+                     <p>&nbsp;</p>
+                  </div>
+                  <table cellspacing="3" cellpadding="2">
+                     <tbody>
+                        <tr>
+                           <td class="function_label" style="border-top: 0px;">Category:</td>
+                           <td class="function_details" style="border-top: 0px;">Text Functions</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Name:</td>
+                           <td class="function_details">ConCat</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Arguments:</td>
+                           <td class="function_details">&nbsp;</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Return Type:</td>
+                           <td class="function_details">TEXT</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Description:</td>
+                           <td class="function_details">Returns the merged text value of all the arguments.</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Examples:</td>
+                           <td class="function_details">ConCat("abc","def","ghi") returns "abcdefghi"</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </td>
+         </tr>
+         <tr class="function_list" >
+            <td class="function_name">LTrim</td>
+            <td>TEXT text, [TEXT character_mask]</td>
+            <td>TEXT</td>
+            <td>Strip whitespace (or other characters) from the beginning of a text value.</td>
+         </tr>
+         <tr class="function_explaination" >
+            <td colspan="4">
+               <div class="container">
+                  <div class="heading" style="overflow: hidden;">
+                     <div style="float: left;">LTrim</div>
+                     <div class="close_function" style="float: right; margin-right: 5px;">Close</div>
+                     <p>&nbsp;</p>
+                  </div>
+                  <table cellspacing="3" cellpadding="2">
+                     <tbody>
+                        <tr>
+                           <td class="function_label" style="border-top: 0px;">Category:</td>
+                           <td class="function_details" style="border-top: 0px;">Text Functions</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Name:</td>
+                           <td class="function_details">LTrim</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Arguments:</td>
+                           <td class="function_details">TEXT text, [TEXT character_mask]</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Return Type:</td>
+                           <td class="function_details">TEXT</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Description:</td>
+                           <td class="function_details">Strip whitespace (or other characters) from the beginning of a<br>text value.</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Examples:</td>
+                           <td class="function_details">LTrim(" abc ") will return "abc "<br>LTrim("--abc---", "-")<br>will return "abc---"</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </td>
+         </tr>
+         <tr class="function_list" >
+            <td class="function_name">Num</td>
+            <td>TEXT text</td>
+            <td>NUMBER</td>
+            <td>Converts a text value to number if the text value contains only numeric characters and a decimal<br>point.</td>
+         </tr>
+         <tr class="function_explaination" >
+            <td colspan="4">
+               <div class="container">
+                  <div class="heading" style="overflow: hidden;">
+                     <div style="float: left;">Num</div>
+                     <div class="close_function" style="float: right; margin-right: 5px;">Close</div>
+                     <p>&nbsp;</p>
+                  </div>
+                  <table cellspacing="3" cellpadding="2">
+                     <tbody>
+                        <tr>
+                           <td class="function_label" style="border-top: 0px;">Category:</td>
+                           <td class="function_details" style="border-top: 0px;">Text Functions</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Name:</td>
+                           <td class="function_details">Num</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Arguments:</td>
+                           <td class="function_details">TEXT text</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Return Type:</td>
+                           <td class="function_details">NUMBER</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Description:</td>
+                           <td class="function_details">Converts a text value to number if the text value contains only<br>numeric characters and a decimal point.</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Examples:</td>
+                           <td class="function_details">Num("8950") will return 8950 in numeric form</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </td>
+         </tr>
+         <tr class="function_list" >
+            <td class="function_name">RTrim</td>
+            <td>TEXT text, [TEXT character_mask]</td>
+            <td>TEXT</td>
+            <td>Strip whitespace (or other characters) from the end of a text value.</td>
+         </tr>
+         <tr class="function_explaination" >
+            <td colspan="4">
+               <div class="container">
+                  <div class="heading" style="overflow: hidden;">
+                     <div style="float: left;">RTrim</div>
+                     <div class="close_function" style="float: right; margin-right: 5px;">Close</div>
+                     <p>&nbsp;</p>
+                  </div>
+                  <table cellspacing="3" cellpadding="2">
+                     <tbody>
+                        <tr>
+                           <td class="function_label" style="border-top: 0px;">Category:</td>
+                           <td class="function_details" style="border-top: 0px;">Text Functions</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Name:</td>
+                           <td class="function_details">RTrim</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Arguments:</td>
+                           <td class="function_details">TEXT text, [TEXT character_mask]</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Return Type:</td>
+                           <td class="function_details">TEXT</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Description:</td>
+                           <td class="function_details">Strip whitespace (or other characters) from the end of a text<br>value.</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Examples:</td>
+                           <td class="function_details">RTrim(" abc ") will return " abc"<br>RTrim("--abc---", "-")<br>will return "--abc"</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </td>
+         </tr>
+         <tr class="function_list" >
+            <td class="function_name">Str</td>
+            <td>DATABASE_FIELD/MIXED variable</td>
+            <td>TEXT</td>
+            <td>Returns text value of a variable.</td>
+         </tr>
+         <tr class="function_explaination" >
+            <td colspan="4">
+               <div class="container">
+                  <div class="heading" style="overflow: hidden;">
+                     <div style="float: left;">Str</div>
+                     <div class="close_function" style="float: right; margin-right: 5px;">Close</div>
+                     <p>&nbsp;</p>
+                  </div>
+                  <table cellspacing="3" cellpadding="2">
+                     <tbody>
+                        <tr>
+                           <td class="function_label" style="border-top: 0px;">Category:</td>
+                           <td class="function_details" style="border-top: 0px;">Text Functions</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Name:</td>
+                           <td class="function_details">Str</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Arguments:</td>
+                           <td class="function_details">DATABASE_FIELD/MIXED variable</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Return Type:</td>
+                           <td class="function_details">TEXT</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Description:</td>
+                           <td class="function_details">Returns text value of a variable.</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Examples:</td>
+                           <td class="function_details">Str("12345") returns "12345" in text form</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </td>
+         </tr>
+         <tr class="function_list" >
+            <td class="function_name">StrLen</td>
+            <td>TEXT_FIELD/TEXT text</td>
+            <td>NUMBER</td>
+            <td>Returns the length of the given text value.</td>
+         </tr>
+         <tr class="function_explaination" >
+            <td colspan="4">
+               <div class="container">
+                  <div class="heading" style="overflow: hidden;">
+                     <div style="float: left;">StrLen</div>
+                     <div class="close_function" style="float: right; margin-right: 5px;">Close</div>
+                     <p>&nbsp;</p>
+                  </div>
+                  <table cellspacing="3" cellpadding="2">
+                     <tbody>
+                        <tr>
+                           <td class="function_label" style="border-top: 0px;">Category:</td>
+                           <td class="function_details" style="border-top: 0px;">Text Functions</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Name:</td>
+                           <td class="function_details">StrLen</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Arguments:</td>
+                           <td class="function_details">TEXT_FIELD/TEXT text</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Return Type:</td>
+                           <td class="function_details">NUMBER</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Description:</td>
+                           <td class="function_details">Returns the length of the given text value.</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Examples:</td>
+                           <td class="function_details">StrLen("Hello World") returns 11</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </td>
+         </tr>
+         <tr class="function_list" >
+            <td class="function_name">SubStr</td>
+            <td>TEXT_FIELD/TEXT text, NUMBER start, [NUMBER length]</td>
+            <td>TEXT</td>
+            <td>Return part of a text value.</td>
+         </tr>
+         <tr class="function_explaination" >
+            <td colspan="4">
+               <div class="container">
+                  <div class="heading" style="overflow: hidden;">
+                     <div style="float: left;">SubStr</div>
+                     <div class="close_function" style="float: right; margin-right: 5px;">Close</div>
+                     <p>&nbsp;</p>
+                  </div>
+                  <table cellspacing="3" cellpadding="2">
+                     <tbody>
+                        <tr>
+                           <td class="function_label" style="border-top: 0px;">Category:</td>
+                           <td class="function_details" style="border-top: 0px;">Text Functions</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Name:</td>
+                           <td class="function_details">SubStr</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Arguments:</td>
+                           <td class="function_details">TEXT_FIELD/TEXT text, NUMBER start, [NUMBER length]</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Return Type:</td>
+                           <td class="function_details">TEXT</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Description:</td>
+                           <td class="function_details">
+                              Returns the portion of text value specified by the start and<br>length parameters.
+                              <p>&nbsp;</p>
+                              <p><b>TEXT_FIELD/TEXT text</b><br>The input text value. Must be<br>one character or longer.</p>
+                              <p><b>INTEGER start</b><br>If start is non-negative, the<br>returned text value will start at the start'th position in text value, counting from<br>zero. For instance, in the text value 'abcdef', the character at position 0 is 'a', the<br>character at position 2 is 'c', and so forth.</p>
+                              <p>If start is negative, the returned<br>text value will start at the start'th character from the end of text value.</p>
+                              <p>If<br>text value is less than start characters long, FALSE will be returned.</p>
+                              <p><b>INTEGER<br>length</b><br>If length is given and is positive, the text value returned will<br>contain at most length characters beginning from start (depending on the length of text<br>value).</p>
+                              <p>If length is given and is negative, then that many characters will be<br>omitted from the end of text value (after the start position has been calculated when a<br>start is negative). If start denotes the position of this truncation or beyond, FALSE<br>will be returned.</p>
+                              <p>If length is given and is 0, FALSE or NULL, an empty text value<br>will be returned.</p>
+                              <p>If length is omitted, the substring starting from start until<br>the end of the text value will be returned.</p>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Examples:</td>
+                           <td class="function_details">substr("abcdef", 0, 2) returns "ab"<br>substr("abcdef", -1)<br>returns "f"<br>substr("abcdef", -2) returns "ef"<br>substr("abcdef", -3, 1) returns<br>"d"</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </td>
+         </tr>
+         <tr class="function_list" >
+            <td class="function_name">Trim</td>
+            <td>TEXT text, [TEXT character_mask]</td>
+            <td>TEXT</td>
+            <td>Strip whitespace (or other characters) from the beginning and end of a text value.</td>
+         </tr>
+         <tr class="function_explaination" >
+            <td colspan="4">
+               <div class="container">
+                  <div class="heading" style="overflow: hidden;">
+                     <div style="float: left;">Trim</div>
+                     <div class="close_function" style="float: right; margin-right: 5px;">Close</div>
+                     <p>&nbsp;</p>
+                  </div>
+                  <table cellspacing="3" cellpadding="2">
+                     <tbody>
+                        <tr>
+                           <td class="function_label" style="border-top: 0px;">Category:</td>
+                           <td class="function_details" style="border-top: 0px;">Text Functions</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Name:</td>
+                           <td class="function_details">Trim</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Arguments:</td>
+                           <td class="function_details">TEXT text, [TEXT character_mask]</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Return Type:</td>
+                           <td class="function_details">TEXT</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Description:</td>
+                           <td class="function_details">Strip whitespace (or other characters) from the beginning and<br>end of a text value.</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Examples:</td>
+                           <td class="function_details">Trim(" abc ") will return "abc"<br>Trim("---abc--", "-") will<br>return "abc"</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </td>
+         </tr>
+         <tr>
+            <td class="group_name" colspan="4"><a class="open_icon">Number Functions (21)</a></td>
+         </tr>
+         <tr class="function_list" >
+            <th nowrap="nowrap">Name</th>
+            <th nowrap="nowrap">Arguments</th>
+            <th nowrap="nowrap">Return</th>
+            <th nowrap="nowrap">Description</th>
+         </tr>
+         <tr class="function_list" >
+            <td class="function_name">Abs</td>
+            <td>NUMBER N</td>
+            <td>NUMBER</td>
+            <td>Returns the absolute value of number N</td>
+         </tr>
+         <tr class="function_explaination" >
+            <td colspan="4">
+               <div class="container">
+                  <div class="heading" style="overflow: hidden;">
+                     <div style="float: left;">Abs</div>
+                     <div class="close_function" style="float: right; margin-right: 5px;">Close</div>
+                     <p>&nbsp;</p>
+                  </div>
+                  <table cellspacing="3" cellpadding="2">
+                     <tbody>
+                        <tr>
+                           <td class="function_label" style="border-top: 0px;">Category:</td>
+                           <td class="function_details" style="border-top: 0px;">Number Functions</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Name:</td>
+                           <td class="function_details">Abs</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Arguments:</td>
+                           <td class="function_details">NUMBER N</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Return Type:</td>
+                           <td class="function_details">NUMBER</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Description:</td>
+                           <td class="function_details">Returns the absolute value of number N</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Examples:</td>
+                           <td class="function_details">Abs(-4.2) will return 4.2<br>Abs(5) will return 5</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </td>
+         </tr>
+         <tr class="function_list" >
+            <td class="function_name">ATan</td>
+            <td>NUMBER N</td>
+            <td>NUMBER</td>
+            <td>Returns the arc tangent of number N in radians</td>
+         </tr>
+         <tr class="function_explaination" >
+            <td colspan="4">
+               <div class="container">
+                  <div class="heading" style="overflow: hidden;">
+                     <div style="float: left;">ATan</div>
+                     <div class="close_function" style="float: right; margin-right: 5px;">Close</div>
+                     <p>&nbsp;</p>
+                  </div>
+                  <table cellspacing="3" cellpadding="2">
+                     <tbody>
+                        <tr>
+                           <td class="function_label" style="border-top: 0px;">Category:</td>
+                           <td class="function_details" style="border-top: 0px;">Number Functions</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Name:</td>
+                           <td class="function_details">ATan</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Arguments:</td>
+                           <td class="function_details">NUMBER N</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Return Type:</td>
+                           <td class="function_details">NUMBER</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Description:</td>
+                           <td class="function_details">Returns the arc tangent of number N in radians. ATan() is the<br>complementary function of Tan(), which means that a == Tan(ATan(a)) for every value of a<br>that is within ATan()'s range.</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Examples:</td>
+                           <td class="function_details">ATan(50) will return 1.5507989928217</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </td>
+         </tr>
+         <tr class="function_list" >
+            <td class="function_name">Ceil</td>
+            <td>NUMBER N</td>
+            <td>NUMBER</td>
+            <td>Returns the next highest integer value by rounding up value if necessary.</td>
+         </tr>
+         <tr class="function_explaination" >
+            <td colspan="4">
+               <div class="container">
+                  <div class="heading" style="overflow: hidden;">
+                     <div style="float: left;">Ceil</div>
+                     <div class="close_function" style="float: right; margin-right: 5px;">Close</div>
+                     <p>&nbsp;</p>
+                  </div>
+                  <table cellspacing="3" cellpadding="2">
+                     <tbody>
+                        <tr>
+                           <td class="function_label" style="border-top: 0px;">Category:</td>
+                           <td class="function_details" style="border-top: 0px;">Number Functions</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Name:</td>
+                           <td class="function_details">Ceil</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Arguments:</td>
+                           <td class="function_details">NUMBER N</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Return Type:</td>
+                           <td class="function_details">NUMBER</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Description:</td>
+                           <td class="function_details">Returns the next highest integer value by rounding up value if<br>necessary.</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Examples:</td>
+                           <td class="function_details">Ceil(5.2) will return 6<br>Ceil(2.4) will return 3</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </td>
+         </tr>
+         <tr class="function_list" >
+            <td class="function_name">Cos</td>
+            <td>NUMBER N</td>
+            <td>NUMBER</td>
+            <td>Returns the cosine of the number N</td>
+         </tr>
+         <tr class="function_explaination" >
+            <td colspan="4">
+               <div class="container">
+                  <div class="heading" style="overflow: hidden;">
+                     <div style="float: left;">Cos</div>
+                     <div class="close_function" style="float: right; margin-right: 5px;">Close</div>
+                     <p>&nbsp;</p>
+                  </div>
+                  <table cellspacing="3" cellpadding="2">
+                     <tbody>
+                        <tr>
+                           <td class="function_label" style="border-top: 0px;">Category:</td>
+                           <td class="function_details" style="border-top: 0px;">Number Functions</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Name:</td>
+                           <td class="function_details">Cos</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Arguments:</td>
+                           <td class="function_details">NUMBER N</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Return Type:</td>
+                           <td class="function_details">NUMBER</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Description:</td>
+                           <td class="function_details">Returns the cosine of the number N. The number N is in<br>radians.</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Examples:</td>
+                           <td class="function_details">Cos(50) will return 0.96496602849211</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </td>
+         </tr>
+         <tr class="function_list" >
+            <td class="function_name">Cosh</td>
+            <td>NUMBER N</td>
+            <td>NUMBER</td>
+            <td>Returns the hyperbolic cosine of number N</td>
+         </tr>
+         <tr class="function_explaination" >
+            <td colspan="4">
+               <div class="container">
+                  <div class="heading" style="overflow: hidden;">
+                     <div style="float: left;">Cosh</div>
+                     <div class="close_function" style="float: right; margin-right: 5px;">Close</div>
+                     <p>&nbsp;</p>
+                  </div>
+                  <table cellspacing="3" cellpadding="2">
+                     <tbody>
+                        <tr>
+                           <td class="function_label" style="border-top: 0px;">Category:</td>
+                           <td class="function_details" style="border-top: 0px;">Number Functions</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Name:</td>
+                           <td class="function_details">Cosh</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Arguments:</td>
+                           <td class="function_details">NUMBER N</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Return Type:</td>
+                           <td class="function_details">NUMBER</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Description:</td>
+                           <td class="function_details">Returns the hyperbolic cosine of number N, defined as (Exp(N) +<br>Exp(-N))/2.</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Examples:</td>
+                           <td class="function_details">Cosh(2) will return 3.7621956910836</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </td>
+         </tr>
+         <tr class="function_list" >
+            <td class="function_name">CoTan</td>
+            <td>NUMBER N</td>
+            <td>NUMBER</td>
+            <td>Returns the cotangent of number N</td>
+         </tr>
+         <tr class="function_explaination" >
+            <td colspan="4">
+               <div class="container">
+                  <div class="heading" style="overflow: hidden;">
+                     <div style="float: left;">CoTan</div>
+                     <div class="close_function" style="float: right; margin-right: 5px;">Close</div>
+                     <p>&nbsp;</p>
+                  </div>
+                  <table cellspacing="3" cellpadding="2">
+                     <tbody>
+                        <tr>
+                           <td class="function_label" style="border-top: 0px;">Category:</td>
+                           <td class="function_details" style="border-top: 0px;">Number Functions</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Name:</td>
+                           <td class="function_details">CoTan</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Arguments:</td>
+                           <td class="function_details">NUMBER N</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Return Type:</td>
+                           <td class="function_details">NUMBER</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Description:</td>
+                           <td class="function_details">Returns the cotangent of number N, defined as 1/Tan(N). The<br>number N is in radians.</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Examples:</td>
+                           <td class="function_details">CoTan(2) will return -0.45765755436029</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </td>
+         </tr>
+         <tr class="function_list" >
+            <td class="function_name">Exp</td>
+            <td>NUMBER N</td>
+            <td>NUMBER</td>
+            <td>Returns e raised to the power of number N</td>
+         </tr>
+         <tr class="function_explaination" >
+            <td colspan="4">
+               <div class="container">
+                  <div class="heading" style="overflow: hidden;">
+                     <div style="float: left;">Exp</div>
+                     <div class="close_function" style="float: right; margin-right: 5px;">Close</div>
+                     <p>&nbsp;</p>
+                  </div>
+                  <table cellspacing="3" cellpadding="2">
+                     <tbody>
+                        <tr>
+                           <td class="function_label" style="border-top: 0px;">Category:</td>
+                           <td class="function_details" style="border-top: 0px;">Number Functions</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Name:</td>
+                           <td class="function_details">Exp</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Arguments:</td>
+                           <td class="function_details">NUMBER N</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Return Type:</td>
+                           <td class="function_details">NUMBER</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Description:</td>
+                           <td class="function_details">Returns e raised to the power of number N. 'e' is the base of<br>the natural system of logarithms, or approximately 2.718282.</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Examples:</td>
+                           <td class="function_details">Exp(2) will return 7.3890560989307</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </td>
+         </tr>
+         <tr class="function_list" >
+            <td class="function_name">Floor</td>
+            <td>NUMBER N</td>
+            <td>NUMBER</td>
+            <td>Returns the next lowest integer value (as float) by rounding down value if necessary.</td>
+         </tr>
+         <tr class="function_explaination" >
+            <td colspan="4">
+               <div class="container">
+                  <div class="heading" style="overflow: hidden;">
+                     <div style="float: left;">Floor</div>
+                     <div class="close_function" style="float: right; margin-right: 5px;">Close</div>
+                     <p>&nbsp;</p>
+                  </div>
+                  <table cellspacing="3" cellpadding="2">
+                     <tbody>
+                        <tr>
+                           <td class="function_label" style="border-top: 0px;">Category:</td>
+                           <td class="function_details" style="border-top: 0px;">Number Functions</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Name:</td>
+                           <td class="function_details">Floor</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Arguments:</td>
+                           <td class="function_details">NUMBER N</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Return Type:</td>
+                           <td class="function_details">NUMBER</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Description:</td>
+                           <td class="function_details">Returns the next lowest integer value (as float) by rounding<br>down value if necessary.</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Examples:</td>
+                           <td class="function_details">Floor(5.2) will return 4<br>Floor(2.4) will return 2</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </td>
+         </tr>
+         <tr class="function_list" >
+            <td class="function_name">Ln</td>
+            <td>NUMBER N</td>
+            <td>NUMBER</td>
+            <td>Returns natural log of the number N</td>
+         </tr>
+         <tr class="function_explaination" >
+            <td colspan="4">
+               <div class="container">
+                  <div class="heading" style="overflow: hidden;">
+                     <div style="float: left;">Ln</div>
+                     <div class="close_function" style="float: right; margin-right: 5px;">Close</div>
+                     <p>&nbsp;</p>
+                  </div>
+                  <table cellspacing="3" cellpadding="2">
+                     <tbody>
+                        <tr>
+                           <td class="function_label" style="border-top: 0px;">Category:</td>
+                           <td class="function_details" style="border-top: 0px;">Number Functions</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Name:</td>
+                           <td class="function_details">Ln</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Arguments:</td>
+                           <td class="function_details">NUMBER N</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Return Type:</td>
+                           <td class="function_details">NUMBER</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Description:</td>
+                           <td class="function_details">Returns natural log of the number N</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </td>
+         </tr>
+         <tr class="function_list" >
+            <td class="function_name">Log10</td>
+            <td>NUMBER N</td>
+            <td>NUMBER</td>
+            <td>Returns the base-10 logarithm of number N</td>
+         </tr>
+         <tr class="function_explaination" >
+            <td colspan="4">
+               <div class="container">
+                  <div class="heading" style="overflow: hidden;">
+                     <div style="float: left;">Log10</div>
+                     <div class="close_function" style="float: right; margin-right: 5px;">Close</div>
+                     <p>&nbsp;</p>
+                  </div>
+                  <table cellspacing="3" cellpadding="2">
+                     <tbody>
+                        <tr>
+                           <td class="function_label" style="border-top: 0px;">Category:</td>
+                           <td class="function_details" style="border-top: 0px;">Number Functions</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Name:</td>
+                           <td class="function_details">Log10</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Arguments:</td>
+                           <td class="function_details">NUMBER N</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Return Type:</td>
+                           <td class="function_details">NUMBER</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Description:</td>
+                           <td class="function_details">Returns the base-10 logarithm of number N</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </td>
+         </tr>
+         <tr class="function_list" >
+            <td class="function_name">Logn</td>
+            <td>NUMBER base, NUMBER N</td>
+            <td>NUMBER</td>
+            <td>Returns the log base of number N</td>
+         </tr>
+         <tr class="function_explaination" >
+            <td colspan="4">
+               <div class="container">
+                  <div class="heading" style="overflow: hidden;">
+                     <div style="float: left;">Logn</div>
+                     <div class="close_function" style="float: right; margin-right: 5px;">Close</div>
+                     <p>&nbsp;</p>
+                  </div>
+                  <table cellspacing="3" cellpadding="2">
+                     <tbody>
+                        <tr>
+                           <td class="function_label" style="border-top: 0px;">Category:</td>
+                           <td class="function_details" style="border-top: 0px;">Number Functions</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Name:</td>
+                           <td class="function_details">Logn</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Arguments:</td>
+                           <td class="function_details">NUMBER base, NUMBER N</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Return Type:</td>
+                           <td class="function_details">NUMBER</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Description:</td>
+                           <td class="function_details">Returns the log base of number N</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Examples:</td>
+                           <td class="function_details">Logn(10, 100) return 2</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </td>
+         </tr>
+         <tr class="function_list" >
+            <td class="function_name">Pow</td>
+            <td>NUMBER base, NUMBER exp</td>
+            <td>NUMBER</td>
+            <td>The Power function raises Base to any power.</td>
+         </tr>
+         <tr class="function_explaination" >
+            <td colspan="4">
+               <div class="container">
+                  <div class="heading" style="overflow: hidden;">
+                     <div style="float: left;">Pow</div>
+                     <div class="close_function" style="float: right; margin-right: 5px;">Close</div>
+                     <p>&nbsp;</p>
+                  </div>
+                  <table cellspacing="3" cellpadding="2">
+                     <tbody>
+                        <tr>
+                           <td class="function_label" style="border-top: 0px;">Category:</td>
+                           <td class="function_details" style="border-top: 0px;">Number Functions</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Name:</td>
+                           <td class="function_details">Pow</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Arguments:</td>
+                           <td class="function_details">NUMBER base, NUMBER exp</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Return Type:</td>
+                           <td class="function_details">NUMBER</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Description:</td>
+                           <td class="function_details">The Power function raises Base to any power. For fractional<br>exponents or exponents greater than MaxInt, Base must be greater than 0.</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Examples:</td>
+                           <td class="function_details">Pow(2, 5) return 32<br>Pow(4.1, 3) return 68.921</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </td>
+         </tr>
+         <tr class="function_list" >
+            <td class="function_name">Rnd</td>
+            <td>&nbsp;</td>
+            <td>NUMBER</td>
+            <td>Generates a random number (float value) between 0 and 1.</td>
+         </tr>
+         <tr class="function_explaination" >
+            <td colspan="4">
+               <div class="container">
+                  <div class="heading" style="overflow: hidden;">
+                     <div style="float: left;">Rnd</div>
+                     <div class="close_function" style="float: right; margin-right: 5px;">Close</div>
+                     <p>&nbsp;</p>
+                  </div>
+                  <table cellspacing="3" cellpadding="2">
+                     <tbody>
+                        <tr>
+                           <td class="function_label" style="border-top: 0px;">Category:</td>
+                           <td class="function_details" style="border-top: 0px;">Number Functions</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Name:</td>
+                           <td class="function_details">Rnd</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Arguments:</td>
+                           <td class="function_details">&nbsp;</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Return Type:</td>
+                           <td class="function_details">NUMBER</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Description:</td>
+                           <td class="function_details">Generates a random number (float value) between 0 and 1.</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </td>
+         </tr>
+         <tr class="function_list" >
+            <td class="function_name">Sign</td>
+            <td>NUMBER N</td>
+            <td>NUMBER</td>
+            <td>Returns the signed value of number N</td>
+         </tr>
+         <tr class="function_explaination" >
+            <td colspan="4">
+               <div class="container">
+                  <div class="heading" style="overflow: hidden;">
+                     <div style="float: left;">Sign</div>
+                     <div class="close_function" style="float: right; margin-right: 5px;">Close</div>
+                     <p>&nbsp;</p>
+                  </div>
+                  <table cellspacing="3" cellpadding="2">
+                     <tbody>
+                        <tr>
+                           <td class="function_label" style="border-top: 0px;">Category:</td>
+                           <td class="function_details" style="border-top: 0px;">Number Functions</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Name:</td>
+                           <td class="function_details">Sign</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Arguments:</td>
+                           <td class="function_details">NUMBER N</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Return Type:</td>
+                           <td class="function_details">NUMBER</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Description:</td>
+                           <td class="function_details">Returns the signed value of number N</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Examples:</td>
+                           <td class="function_details">Sign(X) returns -1 if X &lt; 0, +1 if X &gt; 0, 0 if X=0.<br>It can be used as Sqr(X)</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </td>
+         </tr>
+         <tr class="function_list" >
+            <td class="function_name">Sin</td>
+            <td>NUMBER N</td>
+            <td>NUMBER</td>
+            <td>Returns the sine of the number N</td>
+         </tr>
+         <tr class="function_explaination" >
+            <td colspan="4">
+               <div class="container">
+                  <div class="heading" style="overflow: hidden;">
+                     <div style="float: left;">Sin</div>
+                     <div class="close_function" style="float: right; margin-right: 5px;">Close</div>
+                     <p>&nbsp;</p>
+                  </div>
+                  <table cellspacing="3" cellpadding="2">
+                     <tbody>
+                        <tr>
+                           <td class="function_label" style="border-top: 0px;">Category:</td>
+                           <td class="function_details" style="border-top: 0px;">Number Functions</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Name:</td>
+                           <td class="function_details">Sin</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Arguments:</td>
+                           <td class="function_details">NUMBER N</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Return Type:</td>
+                           <td class="function_details">NUMBER</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Description:</td>
+                           <td class="function_details">Returns the sine of the number N. The number N is in radians.</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Examples:</td>
+                           <td class="function_details">Sin(50) will return -0.26237485370393</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </td>
+         </tr>
+         <tr class="function_list" >
+            <td class="function_name">Sinh</td>
+            <td>NUMBER N</td>
+            <td>NUMBER</td>
+            <td>Returns the hyperbolic sine of number N</td>
+         </tr>
+         <tr class="function_explaination" >
+            <td colspan="4">
+               <div class="container">
+                  <div class="heading" style="overflow: hidden;">
+                     <div style="float: left;">Sinh</div>
+                     <div class="close_function" style="float: right; margin-right: 5px;">Close</div>
+                     <p>&nbsp;</p>
+                  </div>
+                  <table cellspacing="3" cellpadding="2">
+                     <tbody>
+                        <tr>
+                           <td class="function_label" style="border-top: 0px;">Category:</td>
+                           <td class="function_details" style="border-top: 0px;">Number Functions</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Name:</td>
+                           <td class="function_details">Sinh</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Arguments:</td>
+                           <td class="function_details">NUMBER N</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Return Type:</td>
+                           <td class="function_details">NUMBER</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Description:</td>
+                           <td class="function_details">Returns the hyperbolic sine of number N, defined as (exp(N) -<br>exp(-N))/2.</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Examples:</td>
+                           <td class="function_details">Sinh(2) will return 3.626860407847</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </td>
+         </tr>
+         <tr class="function_list" >
+            <td class="function_name">Sqr</td>
+            <td>NUMBER N</td>
+            <td>NUMBER</td>
+            <td>Returns the square of argument.</td>
+         </tr>
+         <tr class="function_explaination" >
+            <td colspan="4">
+               <div class="container">
+                  <div class="heading" style="overflow: hidden;">
+                     <div style="float: left;">Sqr</div>
+                     <div class="close_function" style="float: right; margin-right: 5px;">Close</div>
+                     <p>&nbsp;</p>
+                  </div>
+                  <table cellspacing="3" cellpadding="2">
+                     <tbody>
+                        <tr>
+                           <td class="function_label" style="border-top: 0px;">Category:</td>
+                           <td class="function_details" style="border-top: 0px;">Number Functions</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Name:</td>
+                           <td class="function_details">Sqr</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Arguments:</td>
+                           <td class="function_details">NUMBER N</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Return Type:</td>
+                           <td class="function_details">NUMBER</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Description:</td>
+                           <td class="function_details">Returns the square of argument.</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Examples:</td>
+                           <td class="function_details">Sqr("7") will return 49</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </td>
+         </tr>
+         <tr class="function_list" >
+            <td class="function_name">Sqrt</td>
+            <td>NUMBER N</td>
+            <td>NUMBER</td>
+            <td>Returns the square root of number N</td>
+         </tr>
+         <tr class="function_explaination" >
+            <td colspan="4">
+               <div class="container">
+                  <div class="heading" style="overflow: hidden;">
+                     <div style="float: left;">Sqrt</div>
+                     <div class="close_function" style="float: right; margin-right: 5px;">Close</div>
+                     <p>&nbsp;</p>
+                  </div>
+                  <table cellspacing="3" cellpadding="2">
+                     <tbody>
+                        <tr>
+                           <td class="function_label" style="border-top: 0px;">Category:</td>
+                           <td class="function_details" style="border-top: 0px;">Number Functions</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Name:</td>
+                           <td class="function_details">Sqrt</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Arguments:</td>
+                           <td class="function_details">NUMBER N</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Return Type:</td>
+                           <td class="function_details">NUMBER</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Description:</td>
+                           <td class="function_details">Returns the square root of number N</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Examples:</td>
+                           <td class="function_details">Sqrt("49") will return 3</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </td>
+         </tr>
+         <tr class="function_list" >
+            <td class="function_name">Tan</td>
+            <td>NUMBER N</td>
+            <td>NUMBER</td>
+            <td>Returns the tangent of the number N</td>
+         </tr>
+         <tr class="function_explaination" >
+            <td colspan="4">
+               <div class="container">
+                  <div class="heading" style="overflow: hidden;">
+                     <div style="float: left;">Tan</div>
+                     <div class="close_function" style="float: right; margin-right: 5px;">Close</div>
+                     <p>&nbsp;</p>
+                  </div>
+                  <table cellspacing="3" cellpadding="2">
+                     <tbody>
+                        <tr>
+                           <td class="function_label" style="border-top: 0px;">Category:</td>
+                           <td class="function_details" style="border-top: 0px;">Number Functions</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Name:</td>
+                           <td class="function_details">Tan</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Arguments:</td>
+                           <td class="function_details">NUMBER N</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Return Type:</td>
+                           <td class="function_details">NUMBER</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Description:</td>
+                           <td class="function_details">Returns the tangent of the number N. The number N is in<br>radians.</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Examples:</td>
+                           <td class="function_details">Tan(2) will return -2.1850398632615</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </td>
+         </tr>
+         <tr class="function_list" >
+            <td class="function_name">Trunc</td>
+            <td>NUMBER N</td>
+            <td>NUMBER</td>
+            <td>Discards the fractional part of a number N</td>
+         </tr>
+         <tr class="function_explaination" >
+            <td colspan="4">
+               <div class="container">
+                  <div class="heading" style="overflow: hidden;">
+                     <div style="float: left;">Trunc</div>
+                     <div class="close_function" style="float: right; margin-right: 5px;">Close</div>
+                     <p>&nbsp;</p>
+                  </div>
+                  <table cellspacing="3" cellpadding="2">
+                     <tbody>
+                        <tr>
+                           <td class="function_label" style="border-top: 0px;">Category:</td>
+                           <td class="function_details" style="border-top: 0px;">Number Functions</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Name:</td>
+                           <td class="function_details">Trunc</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Arguments:</td>
+                           <td class="function_details">NUMBER N</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Return Type:</td>
+                           <td class="function_details">NUMBER</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Description:</td>
+                           <td class="function_details">Discards the fractional part of a number N</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Examples:</td>
+                           <td class="function_details">TRUNC(-3.2) will return -3<br>TRUNC(3.2) will return 3</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </td>
+         </tr>
+         <tr class="function_list" >
+            <td class="function_name">Val</td>
+            <td>TEXT argument</td>
+            <td>NUMBER</td>
+            <td>Returns the floating point numeric value of the text value.</td>
+         </tr>
+         <tr class="function_explaination" >
+            <td colspan="4">
+               <div class="container">
+                  <div class="heading" style="overflow: hidden;">
+                     <div style="float: left;">Val</div>
+                     <div class="close_function" style="float: right; margin-right: 5px;">Close</div>
+                     <p>&nbsp;</p>
+                  </div>
+                  <table cellspacing="3" cellpadding="2">
+                     <tbody>
+                        <tr>
+                           <td class="function_label" style="border-top: 0px;">Category:</td>
+                           <td class="function_details" style="border-top: 0px;">Number Functions</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Name:</td>
+                           <td class="function_details">Val</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Arguments:</td>
+                           <td class="function_details">TEXT argument</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Return Type:</td>
+                           <td class="function_details">NUMBER</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Description:</td>
+                           <td class="function_details">Returns the floating point numeric value of the text value.</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Examples:</td>
+                           <td class="function_details">Val("3.1") return 3.1</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </td>
+         </tr>
+         <tr>
+            <td class="group_name" colspan="4"><a class="open_icon">Date Functions (16)</a></td>
+         </tr>
+         <tr class="function_list" >
+            <th nowrap="nowrap">Name</th>
+            <th nowrap="nowrap">Arguments</th>
+            <th nowrap="nowrap">Return</th>
+            <th nowrap="nowrap">Description</th>
+         </tr>
+         <tr class="function_list" >
+            <td class="function_name">Make_Date</td>
+            <td>NUMBER year, NUMBER month, NUMBER day, [NUMBER hour], [NUMBER minute], [NUMBER second]</td>
+            <td>DATE</td>
+            <td>Creates a date from given year, month, day, hour, minute, and second.</td>
+         </tr>
+         <tr class="function_explaination" >
+            <td colspan="4">
+               <div class="container">
+                  <div class="heading" style="overflow: hidden;">
+                     <div style="float: left;">Make_Date</div>
+                     <div class="close_function" style="float: right; margin-right: 5px;">Close</div>
+                     <p>&nbsp;</p>
+                  </div>
+                  <table cellspacing="3" cellpadding="2">
+                     <tbody>
+                        <tr>
+                           <td class="function_label" style="border-top: 0px;">Category:</td>
+                           <td class="function_details" style="border-top: 0px;">Date Functions</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Name:</td>
+                           <td class="function_details">Make_Date</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Arguments:</td>
+                           <td class="function_details">NUMBER year, NUMBER month, NUMBER day, [NUMBER hour], [NUMBER<br>minute], [NUMBER second]</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Return Type:</td>
+                           <td class="function_details">DATE</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Description:</td>
+                           <td class="function_details">Creates a date from given year, month, day, hour, minute, and<br>second.</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Examples:</td>
+                           <td class="function_details">Make_Date(2009, 3, 12) will create a date with value 12th March<br>2009. If time is not specified, then midnight time is taken as default.</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </td>
+         </tr>
+         <tr class="function_list" >
+            <td class="function_name">Date</td>
+            <td>TEXT format, [DATEFIELD/TIMESTAMP t]</td>
+            <td>TEXT</td>
+            <td>Returns a text formatted according to the given format text using the given integer Timestamp or<br>Database Date Field. Timestamp is optional and defaults to the value of current time.</td>
+         </tr>
+         <tr class="function_explaination" >
+            <td colspan="4">
+               <div class="container">
+                  <div class="heading" style="overflow: hidden;">
+                     <div style="float: left;">Date</div>
+                     <div class="close_function" style="float: right; margin-right: 5px;">Close</div>
+                     <p>&nbsp;</p>
+                  </div>
+                  <table cellspacing="3" cellpadding="2">
+                     <tbody>
+                        <tr>
+                           <td class="function_label" style="border-top: 0px;">Category:</td>
+                           <td class="function_details" style="border-top: 0px;">Date Functions</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Name:</td>
+                           <td class="function_details">Date</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Arguments:</td>
+                           <td class="function_details">TEXT format, [DATEFIELD/TIMESTAMP t]</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Return Type:</td>
+                           <td class="function_details">TEXT</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Description:</td>
+                           <td class="function_details">
+                              Returns a text formatted according to the given format text<br>using the given integer Timestamp or Database Date Field. Timestamp is optional and<br>defaults to the value of current time.
+                              <p>&nbsp;</p>
+                              <p>The following characters are recognized in<br>the format parameter text.</p>
+                              <table class="explaination">
+                                 <tbody>
+                                    <tr>
+                                       <th>Format Character</th>
+                                       <th>Description</th>
+                                       <th>Example returned values</th>
+                                    </tr>
+                                 </tbody>
+                                 <tbody class="tbody">
+                                    <tr>
+                                       <td colspan="3">Day</td>
+                                    </tr>
+                                    <tr>
+                                       <td><em>d</em></td>
+                                       <td>Day of the month, 2 digits with leading zeros</td>
+                                       <td><em>01</em> to <em>31</em></td>
+                                    </tr>
+                                    <tr>
+                                       <td><em>D</em></td>
+                                       <td>A textual representation of a day, three letters</td>
+                                       <td><em>Mon</em> through <em>Sun</em></td>
+                                    </tr>
+                                    <tr>
+                                       <td><em>j</em></td>
+                                       <td>Day of the month without leading zeros</td>
+                                       <td><em>1</em> to <em>31</em></td>
+                                    </tr>
+                                    <tr>
+                                       <td><em>l</em> (lowercase 'L')</td>
+                                       <td>A full textual representation of the day of the week</td>
+                                       <td><em>Sunday</em> through <em>Saturday</em></td>
+                                    </tr>
+                                    <tr>
+                                       <td><em>N</em></td>
+                                       <td>ISO-8601 numeric representation of the day of the week (added inPHP 5.1.0)</td>
+                                       <td><em>1</em> (for Monday) through <em>7</em> (for Sunday)</td>
+                                    </tr>
+                                    <tr>
+                                       <td><em>S</em></td>
+                                       <td>English ordinal suffix for the day of the month, 2 characters</td>
+                                       <td><em>st</em>, <em>nd</em>, <em>rd</em> or<em>th</em>. Works well with<br><em>j</em></td>
+                                    </tr>
+                                    <tr>
+                                       <td><em>w</em></td>
+                                       <td>Numeric representation of the day of the week</td>
+                                       <td><em>0</em> (for Sunday) through <em>6</em> (for Saturday)</td>
+                                    </tr>
+                                    <tr>
+                                       <td><em>z</em></td>
+                                       <td>The day of the year (starting from 0)</td>
+                                       <td><em>0</em> through <em>365</em></td>
+                                    </tr>
+                                    <tr>
+                                       <td colspan="3">Week</td>
+                                    </tr>
+                                    <tr>
+                                       <td><em>W</em></td>
+                                       <td>ISO-8601 week number of year, weeks starting on Monday (added in PHP<br>4.1.0)</td>
+                                       <td>Example: <em>42</em> (the 42nd week in the year)</td>
+                                    </tr>
+                                    <tr>
+                                       <td colspan="3">Month</td>
+                                    </tr>
+                                    <tr>
+                                       <td><em>F</em></td>
+                                       <td>A full textual representation of a month, such as January or March</td>
+                                       <td><em>January</em> through <em>December</em></td>
+                                    </tr>
+                                    <tr>
+                                       <td><em>m</em></td>
+                                       <td>Numeric representation of a month, with leading zeros</td>
+                                       <td><em>01</em> through <em>12</em></td>
+                                    </tr>
+                                    <tr>
+                                       <td><em>M</em></td>
+                                       <td>A short textual representation of a month, three letters</td>
+                                       <td><em>Jan</em> through <em>Dec</em></td>
+                                    </tr>
+                                    <tr>
+                                       <td><em>n</em></td>
+                                       <td>Numeric representation of a month, without leading zeros</td>
+                                       <td><em>1</em> through <em>12</em></td>
+                                    </tr>
+                                    <tr>
+                                       <td><em>t</em></td>
+                                       <td>Number of days in the given month</td>
+                                       <td><em>28</em> through <em>31</em></td>
+                                    </tr>
+                                    <tr>
+                                       <td colspan="3">Year</td>
+                                    </tr>
+                                    <tr>
+                                       <td><em>L</em></td>
+                                       <td>Whether it's a leap year</td>
+                                       <td><em>1</em> if it is a leap year, <em>0</em> otherwise.</td>
+                                    </tr>
+                                    <tr>
+                                       <td><em>o</em></td>
+                                       <td>ISO-8601 year number. This has the same value as<em>Y</em>, except that if<br>the ISO week number(<em>W</em>) belongs to the previous or next year, that<br>yearis used instead. (added in PHP 5.1.0)</td>
+                                       <td>Examples: <em>1999</em> or <em>2003</em></td>
+                                    </tr>
+                                    <tr>
+                                       <td><em>Y</em></td>
+                                       <td>A full numeric representation of a year, 4 digits</td>
+                                       <td>Examples: <em>1999</em> or <em>2003</em></td>
+                                    </tr>
+                                    <tr>
+                                       <td><em>y</em></td>
+                                       <td>A two digit representation of a year</td>
+                                       <td>Examples: <em>99</em> or <em>03</em></td>
+                                    </tr>
+                                    <tr>
+                                       <td colspan="3">Time</td>
+                                    </tr>
+                                    <tr>
+                                       <td><em>a</em></td>
+                                       <td>Lowercase Ante meridiem and Post meridiem</td>
+                                       <td><em>am</em> or <em>pm</em></td>
+                                    </tr>
+                                    <tr>
+                                       <td><em>A</em></td>
+                                       <td>Uppercase Ante meridiem and Post meridiem</td>
+                                       <td><em>AM</em> or <em>PM</em></td>
+                                    </tr>
+                                    <tr>
+                                       <td><em>B</em></td>
+                                       <td>Swatch Internet time</td>
+                                       <td><em>000</em> through <em>999</em></td>
+                                    </tr>
+                                    <tr>
+                                       <td><em>g</em></td>
+                                       <td>12-hour format of an hour without leading zeros</td>
+                                       <td><em>1</em> through <em>12</em></td>
+                                    </tr>
+                                    <tr>
+                                       <td><em>G</em></td>
+                                       <td>24-hour format of an hour without leading zeros</td>
+                                       <td><em>0</em> through <em>23</em></td>
+                                    </tr>
+                                    <tr>
+                                       <td><em>h</em></td>
+                                       <td>12-hour format of an hour with leading zeros</td>
+                                       <td><em>01</em> through <em>12</em></td>
+                                    </tr>
+                                    <tr>
+                                       <td><em>H</em></td>
+                                       <td>24-hour format of an hour with leading zeros</td>
+                                       <td><em>00</em> through <em>23</em></td>
+                                    </tr>
+                                    <tr>
+                                       <td><em>i</em></td>
+                                       <td>Minutes with leading zeros</td>
+                                       <td><em>00</em> to <em>59</em></td>
+                                    </tr>
+                                    <tr>
+                                       <td><em>s</em></td>
+                                       <td>Seconds, with leading zeros</td>
+                                       <td><em>00</em> through <em>59</em></td>
+                                    </tr>
+                                    <tr>
+                                       <td><em>u</em></td>
+                                       <td>Microseconds (added in PHP 5.2.2). Note that<span class="function"><strong>date()</strong></span><br>will always generate<em>000000</em> since it takes an <span class="type"><a class="type integer" href="language.types.integer.php">integer</a></span>parameter,<br>whereas <span class="methodname"><a class="methodname" href="datetime.format.php">DateTime::format()</a></span><br>doessupport microseconds if <a class="classname" href="class.datetime.php">DateTime</a><br>wascreated with microseconds.</td>
+                                       <td>Example: <em>654321</em></td>
+                                    </tr>
+                                    <tr>
+                                       <td colspan="3">Timezone</td>
+                                    </tr>
+                                    <tr>
+                                       <td><em>e</em></td>
+                                       <td>Timezone identifier (added in PHP 5.1.0)</td>
+                                       <td>Examples: <em>UTC</em>, <em>GMT</em>, <em>Atlantic/Azores</em></td>
+                                    </tr>
+                                    <tr>
+                                       <td><em>I</em> (capital i)</td>
+                                       <td>Whether or not the date is in daylight saving time</td>
+                                       <td><em>1</em> if Daylight Saving Time, <em>0</em> otherwise.</td>
+                                    </tr>
+                                    <tr>
+                                       <td><em>O</em></td>
+                                       <td>Difference to Greenwich time (GMT) in hours</td>
+                                       <td>Example: <em>+0200</em></td>
+                                    </tr>
+                                    <tr>
+                                       <td><em>P</em></td>
+                                       <td>Difference to Greenwich time (GMT) with colon between hours and minutes<br>(added in PHP 5.1.3)</td>
+                                       <td>Example: <em>+02:00</em></td>
+                                    </tr>
+                                    <tr>
+                                       <td><em>T</em></td>
+                                       <td>Timezone abbreviation</td>
+                                       <td>Examples: <em>EST</em>, <em>MDT</em> ...</td>
+                                    </tr>
+                                    <tr>
+                                       <td><em>Z</em></td>
+                                       <td>Timezone offset in seconds. The offset for timezones west of UTC is<br>alwaysnegative, and for those east of UTC is always positive.</td>
+                                       <td><em>-43200</em> through <em>50400</em></td>
+                                    </tr>
+                                    <tr>
+                                       <td colspan="3">Full Date/Time</td>
+                                    </tr>
+                                    <tr>
+                                       <td><em>c</em></td>
+                                       <td>ISO 8601 date</td>
+                                       <td>2004-02-12T15:19:21+00:00</td>
+                                    </tr>
+                                    <tr>
+                                       <td><em>r</em></td>
+                                       <td>RFC 2822 formatted date</td>
+                                       <td>Example: <em>Thu, 21 Dec 2000 16:01:07 +0200</em></td>
+                                    </tr>
+                                    <tr>
+                                       <td><em>U</em></td>
+                                       <td>Seconds since the Unix Epoch (January 1 1970 00:00:00 GMT)</td>
+                                       <td>&nbsp;</td>
+                                    </tr>
+                                 </tbody>
+                              </table>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Examples:</td>
+                           <td class="function_details">date("d-M-Y", now()) returns 16-Sep-2015</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </td>
+         </tr>
+         <tr class="function_list" >
+            <td class="function_name">Now</td>
+            <td>&nbsp;</td>
+            <td>NUMBER</td>
+            <td>Returns current timestamp.</td>
+         </tr>
+         <tr class="function_explaination" >
+            <td colspan="4">
+               <div class="container">
+                  <div class="heading" style="overflow: hidden;">
+                     <div style="float: left;">Now</div>
+                     <div class="close_function" style="float: right; margin-right: 5px;">Close</div>
+                     <p>&nbsp;</p>
+                  </div>
+                  <table cellspacing="3" cellpadding="2">
+                     <tbody>
+                        <tr>
+                           <td class="function_label" style="border-top: 0px;">Category:</td>
+                           <td class="function_details" style="border-top: 0px;">Date Functions</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Name:</td>
+                           <td class="function_details">Now</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Arguments:</td>
+                           <td class="function_details">&nbsp;</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Return Type:</td>
+                           <td class="function_details">NUMBER</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Description:</td>
+                           <td class="function_details">Returns a 10 digit current timestamp.</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Examples:</td>
+                           <td class="function_details">Now() will return 1442401200 for 16-Sep-2015 11:00AM</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </td>
+         </tr>
+         <tr class="function_list" >
+            <td class="function_name">Date_Add</td>
+            <td>DATEFIELD/TIMESTAMP t, NUMBER n, [TEXT t]</td>
+            <td>NUMBER</td>
+            <td>Performs arithmetic operation on date by adding years, months, weeks, days, hours, minutes, and<br>seconds.</td>
+         </tr>
+         <tr class="function_explaination" >
+            <td colspan="4">
+               <div class="container">
+                  <div class="heading" style="overflow: hidden;">
+                     <div style="float: left;">Date_Add</div>
+                     <div class="close_function" style="float: right; margin-right: 5px;">Close</div>
+                     <p>&nbsp;</p>
+                  </div>
+                  <table cellspacing="3" cellpadding="2">
+                     <tbody>
+                        <tr>
+                           <td class="function_label" style="border-top: 0px;">Category:</td>
+                           <td class="function_details" style="border-top: 0px;">Date Functions</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Name:</td>
+                           <td class="function_details">Date_Add</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Arguments:</td>
+                           <td class="function_details">DATEFIELD/TIMESTAMP t, NUMBER n, [TEXT t]</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Return Type:</td>
+                           <td class="function_details">NUMBER</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Description:</td>
+                           <td class="function_details">
+                              Performs arithmetic operation on date by adding years, months,<br>weeks, days, hours, minutes, and seconds.
+                              <p>&nbsp;</p>
+                              <table class="explaination">
+                                 <tbody>
+                                    <tr>
+                                       <th>Format Character</th>
+                                       <th>Description</th>
+                                       <th>Example returned values</th>
+                                    </tr>
+                                 </tbody>
+                                 <tbody class="tbody">
+                                    <tr>
+                                       <td><em>d</em></td>
+                                       <td>days</td>
+                                       <td>Date_Add(input_date, 2, "d") will add two days to input date</td>
+                                    </tr>
+                                    <tr>
+                                       <td><em>m</em></td>
+                                       <td>months</td>
+                                       <td>Date_Add(input_date, -1, "m") will substract one month from input date</td>
+                                    </tr>
+                                    <tr>
+                                       <td><em>y</em></td>
+                                       <td>years</td>
+                                       <td>Date_Add(input_date, 1, "y") will add one year to input date</td>
+                                    </tr>
+                                    <tr>
+                                       <td><em>w</em></td>
+                                       <td>weeks</td>
+                                       <td>Date_Add(input_date, 3, "w") will add three weeks to input date</td>
+                                    </tr>
+                                    <tr>
+                                       <td><em>h</em></td>
+                                       <td>hours</td>
+                                       <td>Date_Add(input_date, 12, "h") will add twelve hours to input date</td>
+                                    </tr>
+                                    <tr>
+                                       <td><em>min</em></td>
+                                       <td>minutes</td>
+                                       <td>Date_Add(input_date, -30, "min") will substract thrity minutes from input<br>date</td>
+                                    </tr>
+                                    <tr>
+                                       <td><em>s</em></td>
+                                       <td>seconds</td>
+                                       <td>Date_Add(input_date, 120, "h") will add one hundred twenty seconds to input<br>date</td>
+                                    </tr>
+                                 </tbody>
+                              </table>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Examples:</td>
+                           <td class="function_details">Date_Add(input_date, 2, "d") will add two days to input<br>date<br>Date_Add(Make_Date(2015, 2, 12), 10, "d")) will return 22nd of February 2015</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </td>
+         </tr>
+         <tr class="function_list" >
+            <td class="function_name">DateTime_Diff</td>
+            <td>DATEFIELD/TIMESTAMP start, DATEFIELD/TIMESTAMP end</td>
+            <td>NUMBER</td>
+            <td>This function gives the to seconds between two dates.</td>
+         </tr>
+         <tr class="function_explaination" >
+            <td colspan="4">
+               <div class="container">
+                  <div class="heading" style="overflow: hidden;">
+                     <div style="float: left;">DateTime_Diff</div>
+                     <div class="close_function" style="float: right; margin-right: 5px;">Close</div>
+                     <p>&nbsp;</p>
+                  </div>
+                  <table cellspacing="3" cellpadding="2">
+                     <tbody>
+                        <tr>
+                           <td class="function_label" style="border-top: 0px;">Category:</td>
+                           <td class="function_details" style="border-top: 0px;">Date Functions</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Name:</td>
+                           <td class="function_details">DateTime_Diff</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Arguments:</td>
+                           <td class="function_details">DATEFIELD/TIMESTAMP start, DATEFIELD/TIMESTAMP end</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Return Type:</td>
+                           <td class="function_details">NUMBER</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Description:</td>
+                           <td class="function_details">This function gives the to seconds between two dates.</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Examples:</td>
+                           <td class="function_details">DateTime_Diff([Start_Date], [End_Date]) will return total<br>seconds between Start_Date and End_Date<br>DateTime_Diff(Make_Date(2015, 2, 12),<br>Make_Date(2015, 2, 22)) will return 864000</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </td>
+         </tr>
+         <tr class="function_list" >
+            <td class="function_name">Add_Months</td>
+            <td>DATE d, NUMBER m</td>
+            <td>DATE</td>
+            <td>Add months to a date.</td>
+         </tr>
+         <tr class="function_explaination" >
+            <td colspan="4">
+               <div class="container">
+                  <div class="heading" style="overflow: hidden;">
+                     <div style="float: left;">Add_Months</div>
+                     <div class="close_function" style="float: right; margin-right: 5px;">Close</div>
+                     <p>&nbsp;</p>
+                  </div>
+                  <table cellspacing="3" cellpadding="2">
+                     <tbody>
+                        <tr>
+                           <td class="function_label" style="border-top: 0px;">Category:</td>
+                           <td class="function_details" style="border-top: 0px;">Date Functions</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Name:</td>
+                           <td class="function_details">Add_Months</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Arguments:</td>
+                           <td class="function_details">DATE d, NUMBER m</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Return Type:</td>
+                           <td class="function_details">DATE</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Description:</td>
+                           <td class="function_details">Adds m months to date d and returns the date. It preserves the<br>day of the original date. If that day is not in the new date, then last day of that<br>month is returned.</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Examples:</td>
+                           <td class="function_details">Add_Months([Sales_Date], 2) will return a date which is two<br>months after Sales_Date field<br>Add_Months(Make_Date(2015, 5, 12), 2) will 12th July<br>2015 as date</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </td>
+         </tr>
+         <tr class="function_list" >
+            <td class="function_name">Add_Years</td>
+            <td>DATE d, NUMBER y</td>
+            <td>DATE</td>
+            <td>Add years to a date.</td>
+         </tr>
+         <tr class="function_explaination" >
+            <td colspan="4">
+               <div class="container">
+                  <div class="heading" style="overflow: hidden;">
+                     <div style="float: left;">Add_Years</div>
+                     <div class="close_function" style="float: right; margin-right: 5px;">Close</div>
+                     <p>&nbsp;</p>
+                  </div>
+                  <table cellspacing="3" cellpadding="2">
+                     <tbody>
+                        <tr>
+                           <td class="function_label" style="border-top: 0px;">Category:</td>
+                           <td class="function_details" style="border-top: 0px;">Date Functions</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Name:</td>
+                           <td class="function_details">Add_Years</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Arguments:</td>
+                           <td class="function_details">DATE d, NUMBER y</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Return Type:</td>
+                           <td class="function_details">DATE</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Description:</td>
+                           <td class="function_details">Adds y years to date d and returns the date. It preserves the<br>day of the original date. If that day is not in the new month of the new date, then last<br>day of that month is returned.</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Examples:</td>
+                           <td class="function_details">Adjust_Years([Sales_Date], 2) will return a date which is two<br>years after Sales_Date field<br>Adjust_Years(Make_Date(2014, 1, 14), 2) will 14th<br>January 2016 as date</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </td>
+         </tr>
+         <tr class="function_list" >
+            <td class="function_name">Day</td>
+            <td>DATE d</td>
+            <td>NUMBER</td>
+            <td>Returns the day of the month of the Date d.</td>
+         </tr>
+         <tr class="function_explaination" >
+            <td colspan="4">
+               <div class="container">
+                  <div class="heading" style="overflow: hidden;">
+                     <div style="float: left;">Day</div>
+                     <div class="close_function" style="float: right; margin-right: 5px;">Close</div>
+                     <p>&nbsp;</p>
+                  </div>
+                  <table cellspacing="3" cellpadding="2">
+                     <tbody>
+                        <tr>
+                           <td class="function_label" style="border-top: 0px;">Category:</td>
+                           <td class="function_details" style="border-top: 0px;">Date Functions</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Name:</td>
+                           <td class="function_details">Day</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Arguments:</td>
+                           <td class="function_details">DATE d</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Return Type:</td>
+                           <td class="function_details">NUMBER</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Description:</td>
+                           <td class="function_details">Returns the day of the month of the Date d.</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Examples:</td>
+                           <td class="function_details">Day(Make_Date(2015, 3, 28)) will 28</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </td>
+         </tr>
+         <tr class="function_list" >
+            <td class="function_name">Day_Of_Week</td>
+            <td>DATE d</td>
+            <td>NUMBER</td>
+            <td>Returns the number of days by which the given date d follows the first day of the week (Sunday returns<br>0).</td>
+         </tr>
+         <tr class="function_explaination" >
+            <td colspan="4">
+               <div class="container">
+                  <div class="heading" style="overflow: hidden;">
+                     <div style="float: left;">Day_Of_Week</div>
+                     <div class="close_function" style="float: right; margin-right: 5px;">Close</div>
+                     <p>&nbsp;</p>
+                  </div>
+                  <table cellspacing="3" cellpadding="2">
+                     <tbody>
+                        <tr>
+                           <td class="function_label" style="border-top: 0px;">Category:</td>
+                           <td class="function_details" style="border-top: 0px;">Date Functions</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Name:</td>
+                           <td class="function_details">Day_Of_Week</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Arguments:</td>
+                           <td class="function_details">DATE d</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Return Type:</td>
+                           <td class="function_details">NUMBER</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Description:</td>
+                           <td class="function_details">Returns the number of days by which the given date d follows<br>the first day of the week (Sunday returns 0).</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Examples:</td>
+                           <td class="function_details">Day_Of_Week(Make_Date(2015, 9, 26)) returns 6 (Saturday)<br>Day_Of_Week(Make_Date(2015,<br>1, 30)) returns 5 (Friday)</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </td>
+         </tr>
+         <tr class="function_list" >
+            <td class="function_name">Day_Of_Year</td>
+            <td>DATE d</td>
+            <td>NUMBER</td>
+            <td>Returns the number of days by which the given date d follows the first day of the year (January 1<br>returns 0).</td>
+         </tr>
+         <tr class="function_explaination" >
+            <td colspan="4">
+               <div class="container">
+                  <div class="heading" style="overflow: hidden;">
+                     <div style="float: left;">Day_Of_Year</div>
+                     <div class="close_function" style="float: right; margin-right: 5px;">Close</div>
+                     <p>&nbsp;</p>
+                  </div>
+                  <table cellspacing="3" cellpadding="2">
+                     <tbody>
+                        <tr>
+                           <td class="function_label" style="border-top: 0px;">Category:</td>
+                           <td class="function_details" style="border-top: 0px;">Date Functions</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Name:</td>
+                           <td class="function_details">Day_Of_Year</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Arguments:</td>
+                           <td class="function_details">DATE d</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Return Type:</td>
+                           <td class="function_details">NUMBER</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Description:</td>
+                           <td class="function_details">Returns the number of days by which the given date d follows<br>the first day of the year (January 1 returns 0).</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Examples:</td>
+                           <td class="function_details">Day_Of_Year(Make_Date(2015, 9, 29)) returns 271<br>Day_Of_Year(Make_Date(2015,<br>12, 9)) returns 342</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </td>
+         </tr>
+         <tr class="function_list" >
+            <td class="function_name">First_Day_Of_Month</td>
+            <td>DATE d</td>
+            <td>DATE</td>
+            <td>Returns the first day of the month in which the date falls.</td>
+         </tr>
+         <tr class="function_explaination" >
+            <td colspan="4">
+               <div class="container">
+                  <div class="heading" style="overflow: hidden;">
+                     <div style="float: left;">First_Day_Of_Month</div>
+                     <div class="close_function" style="float: right; margin-right: 5px;">Close</div>
+                     <p>&nbsp;</p>
+                  </div>
+                  <table cellspacing="3" cellpadding="2">
+                     <tbody>
+                        <tr>
+                           <td class="function_label" style="border-top: 0px;">Category:</td>
+                           <td class="function_details" style="border-top: 0px;">Date Functions</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Name:</td>
+                           <td class="function_details">First_Day_Of_Month</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Arguments:</td>
+                           <td class="function_details">DATE d</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Return Type:</td>
+                           <td class="function_details">DATE</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Description:</td>
+                           <td class="function_details">Returns the first day of the month in which the date falls.</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Examples:</td>
+                           <td class="function_details">First_Day_Of_Month(Make_Date(2015, 10, 13)) 1st October 2015 as<br>Date</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </td>
+         </tr>
+         <tr class="function_list" >
+            <td class="function_name">First_Day_Of_Year</td>
+            <td>DATE d</td>
+            <td>DATE</td>
+            <td>Returns the first day of the year in which the date falls.</td>
+         </tr>
+         <tr class="function_explaination" >
+            <td colspan="4">
+               <div class="container">
+                  <div class="heading" style="overflow: hidden;">
+                     <div style="float: left;">First_Day_Of_Year</div>
+                     <div class="close_function" style="float: right; margin-right: 5px;">Close</div>
+                     <p>&nbsp;</p>
+                  </div>
+                  <table cellspacing="3" cellpadding="2">
+                     <tbody>
+                        <tr>
+                           <td class="function_label" style="border-top: 0px;">Category:</td>
+                           <td class="function_details" style="border-top: 0px;">Date Functions</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Name:</td>
+                           <td class="function_details">First_Day_Of_Year</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Arguments:</td>
+                           <td class="function_details">DATE d</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Return Type:</td>
+                           <td class="function_details">DATE</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Description:</td>
+                           <td class="function_details">Returns the first day of the year in which the date falls.</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Examples:</td>
+                           <td class="function_details">First_Day_Of_Year(Make_Date(2015, 7, 17)) 1st July 2015 as<br>Date</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </td>
+         </tr>
+         <tr class="function_list" >
+            <td class="function_name">First_Day_Of_Week</td>
+            <td>DATE d</td>
+            <td>DATE</td>
+            <td>Returns the first day (Sunday) of the week in which the date falls.</td>
+         </tr>
+         <tr class="function_explaination" >
+            <td colspan="4">
+               <div class="container">
+                  <div class="heading" style="overflow: hidden;">
+                     <div style="float: left;">First_Day_Of_Week</div>
+                     <div class="close_function" style="float: right; margin-right: 5px;">Close</div>
+                     <p>&nbsp;</p>
+                  </div>
+                  <table cellspacing="3" cellpadding="2">
+                     <tbody>
+                        <tr>
+                           <td class="function_label" style="border-top: 0px;">Category:</td>
+                           <td class="function_details" style="border-top: 0px;">Date Functions</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Name:</td>
+                           <td class="function_details">First_Day_Of_Week</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Arguments:</td>
+                           <td class="function_details">DATE d</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Return Type:</td>
+                           <td class="function_details">DATE</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Description:</td>
+                           <td class="function_details">Returns the first day (Sunday) of the week in which the date<br>falls.</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Examples:</td>
+                           <td class="function_details">First_Day_Of_Week(Make_Date(2015, 5, 9)) will return 3rd May<br>2015 as Date</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </td>
+         </tr>
+         <tr class="function_list" >
+            <td class="function_name">Is_Leap_Day</td>
+            <td>DATE d</td>
+            <td>BOOLEAN</td>
+            <td>Returns true if Date d is 29th of February.</td>
+         </tr>
+         <tr class="function_explaination" >
+            <td colspan="4">
+               <div class="container">
+                  <div class="heading" style="overflow: hidden;">
+                     <div style="float: left;">Is_Leap_Day</div>
+                     <div class="close_function" style="float: right; margin-right: 5px;">Close</div>
+                     <p>&nbsp;</p>
+                  </div>
+                  <table cellspacing="3" cellpadding="2">
+                     <tbody>
+                        <tr>
+                           <td class="function_label" style="border-top: 0px;">Category:</td>
+                           <td class="function_details" style="border-top: 0px;">Date Functions</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Name:</td>
+                           <td class="function_details">Is_Leap_Day</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Arguments:</td>
+                           <td class="function_details">DATE d</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Return Type:</td>
+                           <td class="function_details">BOOLEAN</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Description:</td>
+                           <td class="function_details">Returns true if Date d is 29th of February.</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Examples:</td>
+                           <td class="function_details">Is_Leap_Day(Make_Date(2015, 2, 29)) will return false<br>Is_Leap_Day(Make_Date(2016,<br>2, 29)) will return true</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </td>
+         </tr>
+         <tr class="function_list" >
+            <td class="function_name">Is_Leap_Year</td>
+            <td>DATE d</td>
+            <td>BOOLEAN</td>
+            <td>Returns true if the Date d falls in a leap year.</td>
+         </tr>
+         <tr class="function_explaination" >
+            <td colspan="4">
+               <div class="container">
+                  <div class="heading" style="overflow: hidden;">
+                     <div style="float: left;">Is_Leap_Year</div>
+                     <div class="close_function" style="float: right; margin-right: 5px;">Close</div>
+                     <p>&nbsp;</p>
+                  </div>
+                  <table cellspacing="3" cellpadding="2">
+                     <tbody>
+                        <tr>
+                           <td class="function_label" style="border-top: 0px;">Category:</td>
+                           <td class="function_details" style="border-top: 0px;">Date Functions</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Name:</td>
+                           <td class="function_details">Is_Leap_Year</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Arguments:</td>
+                           <td class="function_details">DATE d</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Return Type:</td>
+                           <td class="function_details">BOOLEAN</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Description:</td>
+                           <td class="function_details">Returns true if the Date d falls in a leap year.</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Examples:</td>
+                           <td class="function_details">Is_Leap_Year(Make_Date(2015, 2, 29)) will return false<br>Is_Leap_Year(Make_Date(2016,<br>2, 29)) will return true</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </td>
+         </tr>
+         <tr class="function_list" >
+            <td class="function_name">Working_Days_In_A_Month</td>
+            <td>DATE d, NUMBER weekend_setting, TEXT holidays</td>
+            <td>NUMBER</td>
+            <td>Calculates total working days in a month</td>
+         </tr>
+         <tr class="function_explaination" >
+            <td colspan="4">
+               <div class="container">
+                  <div class="heading" style="overflow: hidden;">
+                     <div style="float: left;">Working_Days_In_A_Month</div>
+                     <div class="close_function" style="float: right; margin-right: 5px;">Close</div>
+                     <p>&nbsp;</p>
+                  </div>
+                  <table cellspacing="3" cellpadding="2">
+                     <tbody>
+                        <tr>
+                           <td class="function_label" style="border-top: 0px;">Category:</td>
+                           <td class="function_details" style="border-top: 0px;">Date Functions</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Name:</td>
+                           <td class="function_details">Working_Days_In_A_Month</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Arguments:</td>
+                           <td class="function_details">DATE d, NUMBER weekend_setting, TEXT holidays</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Return Type:</td>
+                           <td class="function_details">NUMBER</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Description:</td>
+                           <td class="function_details">
+                              Weekend Settings:
+                              <p>&nbsp;</p>
+                              <p>1: Saturday, Sunday<br>2: Sunday<br>3:<br>Friday, Saturday</p>
+                              <p>Holidays: Comma separated timestamps</p>
+                              <p>&nbsp;</p>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Examples:</td>
+                           <td class="function_details">
+                              working_days_in_a_month(Make_Date(2016, 3, 1, 0, 0, 0), 1,"")<br>return 23
+                              <p>&nbsp;</p>
+                              <p>working_days_in_a_month(Make_Date(2016, 3, 1, 0, 0, 0), 1,<br>Make_Date(2016, 3, 23, 0, 0, 0)) return 22</p>
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </td>
+         </tr>
+         <tr>
+            <td class="group_name" colspan="4"><a class="open_icon">Formatting Functions (2)</a></td>
+         </tr>
+         <tr class="function_list" >
+            <th nowrap="nowrap">Name</th>
+            <th nowrap="nowrap">Arguments</th>
+            <th nowrap="nowrap">Return</th>
+            <th nowrap="nowrap">Description</th>
+         </tr>
+         <tr class="function_list" >
+            <td class="function_name">Format_Number</td>
+            <td>NUMBER value, [NUMBER decimal_points], [TEXT decimal_point_character], [TEXT thousands_seperator]</td>
+            <td>TEXT</td>
+            <td>Format a number with grouped thousands.</td>
+         </tr>
+         <tr class="function_explaination" >
+            <td colspan="4">
+               <div class="container">
+                  <div class="heading" style="overflow: hidden;">
+                     <div style="float: left;">Format_Number</div>
+                     <div class="close_function" style="float: right; margin-right: 5px;">Close</div>
+                     <p>&nbsp;</p>
+                  </div>
+                  <table cellspacing="3" cellpadding="2">
+                     <tbody>
+                        <tr>
+                           <td class="function_label" style="border-top: 0px;">Category:</td>
+                           <td class="function_details" style="border-top: 0px;">Formatting Functions</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Name:</td>
+                           <td class="function_details">Format_Number</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Arguments:</td>
+                           <td class="function_details">NUMBER value, [NUMBER decimal_points], [TEXT<br>decimal_point_character], [TEXT thousands_seperator]</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Return Type:</td>
+                           <td class="function_details">TEXT</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Description:</td>
+                           <td class="function_details">Format a number with grouped thousands.</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Examples:</td>
+                           <td class="function_details">format_number(12000, 2) returns 12,000.00<br>format_number(13500.75,<br>2, ".", "-") returns 13-500.00</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </td>
+         </tr>
+         <tr class="function_list" >
+            <td class="function_name">Format_Seconds</td>
+            <td>NUMBER seconds</td>
+            <td>TEXT</td>
+            <td>Formats seconds to readable format.</td>
+         </tr>
+         <tr class="function_explaination" >
+            <td colspan="4">
+               <div class="container">
+                  <div class="heading" style="overflow: hidden;">
+                     <div style="float: left;">Format_Seconds</div>
+                     <div class="close_function" style="float: right; margin-right: 5px;">Close</div>
+                     <p>&nbsp;</p>
+                  </div>
+                  <table cellspacing="3" cellpadding="2">
+                     <tbody>
+                        <tr>
+                           <td class="function_label" style="border-top: 0px;">Category:</td>
+                           <td class="function_details" style="border-top: 0px;">Formatting Functions</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Name:</td>
+                           <td class="function_details">Format_Seconds</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Arguments:</td>
+                           <td class="function_details">NUMBER seconds</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Return Type:</td>
+                           <td class="function_details">TEXT</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Description:</td>
+                           <td class="function_details">Formats seconds to readable format.</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Examples:</td>
+                           <td class="function_details">Format_Seconds(300) will return 5 minutes<br>Format_Seconds(176600)<br>will return 2 days 1 hours 3 minutes 20 seconds</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </td>
+         </tr>
+         <tr>
+            <td class="group_name" colspan="4"><a class="open_icon">Aggregate Functions (3)</a></td>
+         </tr>
+         <tr class="function_list" >
+            <th nowrap="nowrap">Name</th>
+            <th nowrap="nowrap">Arguments</th>
+            <th nowrap="nowrap">Return</th>
+            <th nowrap="nowrap">Description</th>
+         </tr>
+         <tr class="function_list" >
+            <td class="function_name">Sum</td>
+            <td>&nbsp;</td>
+            <td>NUMBER</td>
+            <td>Returns the sum of all the arguments.</td>
+         </tr>
+         <tr class="function_explaination" >
+            <td colspan="4">
+               <div class="container">
+                  <div class="heading" style="overflow: hidden;">
+                     <div style="float: left;">Sum</div>
+                     <div class="close_function" style="float: right; margin-right: 5px;">Close</div>
+                     <p>&nbsp;</p>
+                  </div>
+                  <table cellspacing="3" cellpadding="2">
+                     <tbody>
+                        <tr>
+                           <td class="function_label" style="border-top: 0px;">Category:</td>
+                           <td class="function_details" style="border-top: 0px;">Aggregate Functions</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Name:</td>
+                           <td class="function_details">Sum</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Arguments:</td>
+                           <td class="function_details">&nbsp;</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Return Type:</td>
+                           <td class="function_details">NUMBER</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Description:</td>
+                           <td class="function_details">Returns the sum of all the arguments.</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Examples:</td>
+                           <td class="function_details">Sum(2, 5, 3, 10) will 20<br>Sum(2.2, 2.5, 7.4) will return 12.1</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </td>
+         </tr>
+         <tr class="function_list" >
+            <td class="function_name">Min</td>
+            <td>&nbsp;</td>
+            <td>NUMBER</td>
+            <td>Returns the minimum number from all the arguments.</td>
+         </tr>
+         <tr class="function_explaination" >
+            <td colspan="4">
+               <div class="container">
+                  <div class="heading" style="overflow: hidden;">
+                     <div style="float: left;">Min</div>
+                     <div class="close_function" style="float: right; margin-right: 5px;">Close</div>
+                     <p>&nbsp;</p>
+                  </div>
+                  <table cellspacing="3" cellpadding="2">
+                     <tbody>
+                        <tr>
+                           <td class="function_label" style="border-top: 0px;">Category:</td>
+                           <td class="function_details" style="border-top: 0px;">Aggregate Functions</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Name:</td>
+                           <td class="function_details">Min</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Arguments:</td>
+                           <td class="function_details">&nbsp;</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Return Type:</td>
+                           <td class="function_details">NUMBER</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Description:</td>
+                           <td class="function_details">Returns the minimum number from all the arguments.</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Examples:</td>
+                           <td class="function_details">Min(10, 7, 199, 18) will 7</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </td>
+         </tr>
+         <tr class="function_list" >
+            <td class="function_name">Max</td>
+            <td>&nbsp;</td>
+            <td>NUMBER</td>
+            <td>Returns the maximum number from all the arguments.</td>
+         </tr>
+         <tr class="function_explaination" >
+            <td colspan="4">
+               <div class="container">
+                  <div class="heading" style="overflow: hidden;">
+                     <div style="float: left;">Max</div>
+                     <div class="close_function" style="float: right; margin-right: 5px;">Close</div>
+                     <p>&nbsp;</p>
+                  </div>
+                  <table cellspacing="3" cellpadding="2">
+                     <tbody>
+                        <tr>
+                           <td class="function_label" style="border-top: 0px;">Category:</td>
+                           <td class="function_details" style="border-top: 0px;">Aggregate Functions</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Name:</td>
+                           <td class="function_details">Max</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Arguments:</td>
+                           <td class="function_details">&nbsp;</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Return Type:</td>
+                           <td class="function_details">NUMBER</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Description:</td>
+                           <td class="function_details">Returns the maximum number from all the arguments.</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Examples:</td>
+                           <td class="function_details">Max(10, 7, 199, 18) will 199</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </td>
+         </tr>
+         <tr>
+            <td class="group_name" colspan="4"><a class="open_icon"> Functions (1)</a></td>
+         </tr>
+         <tr class="function_list" >
+            <th nowrap="nowrap">Name</th>
+            <th nowrap="nowrap">Arguments</th>
+            <th nowrap="nowrap">Return</th>
+            <th nowrap="nowrap">Description</th>
+         </tr>
+         <tr class="function_list" >
+            <td class="function_name">User</td>
+            <td>&nbsp;</td>
+            <td>NUMBER</td>
+            <td>Returns the current user. The value should be assigned to a Users Field.</td>
+         </tr>
+         <tr class="function_explaination" >
+            <td colspan="4">
+               <div class="container">
+                  <div class="heading" style="overflow: hidden;">
+                     <div style="float: left;">User</div>
+                     <div class="close_function" style="float: right; margin-right: 5px;">Close</div>
+                     <p>&nbsp;</p>
+                  </div>
+                  <table cellspacing="3" cellpadding="2">
+                     <tbody>
+                        <tr>
+                           <td class="function_label" style="border-top: 0px;">Category:</td>
+                           <td class="function_details" style="border-top: 0px;">Database Functions</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Name:</td>
+                           <td class="function_details">User</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Arguments:</td>
+                           <td class="function_details">&nbsp;</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Return Type:</td>
+                           <td class="function_details">NUMBER</td>
+                        </tr>
+                        <tr>
+                           <td class="function_label">Description:</td>
+                           <td class="function_details">Returns the current user. The value should be assigned to a<br>Users Field.</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </td>
+         </tr>
+      </tbody>
+   </table>
+</div>

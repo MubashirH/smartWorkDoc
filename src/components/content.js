@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { StaticQuery, graphql, navigate } from "gatsby"
 
 let result
@@ -18,7 +18,6 @@ function filtering(data, id) {
                 }
             }
         })
-        console.log(result);
     }
 }
 function navigation(id) {
