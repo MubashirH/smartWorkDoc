@@ -152,11 +152,10 @@ export default function UserGuide({ data }) {
                                         : null
                                 ))}
                             </Row> :
-                            <Row>
-                                <Col className="pl-5">
+                                <>
                                     { idParams ? <Content wordpress_id={idParams}/> : <Content searchValue={searchParams}/> }
-                                </Col>
-                            </Row> }
+                                </>
+                            }
                         </Col>
                     </Row>
                 </Container>

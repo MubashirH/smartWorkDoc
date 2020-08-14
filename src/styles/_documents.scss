@@ -28,9 +28,31 @@
     }
 }
 
+.no-results {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 .searching {
-    h3 {
-        padding: 1%;
-        cursor: pointer;
+    width: 100%;
+    .results {
+        height: 90vh;
+        overflow-y: scroll;
+        &::-webkit-scrollbar {
+            background-color: #b8dbb7;
+            width: 6px;
+        }
+        &::-webkit-scrollbar-button { display: none;}
+        &::-webkit-scrollbar-thumb {
+            background-color: #4aa147;
+            width: 6px;
+        }
+        p {
+            margin-left: 10px;
+            cursor: pointer;
+        }
     }
+    img { width: 2%;}
+    
 }
