@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react"
 import { Row, Col, Container } from "react-bootstrap"
 import { navigate } from '@reach/router'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -96,6 +96,7 @@ export default function UserGuide({ data }) {
                         <Col md={3} className="side-menu">
                             { appState.repos != null ? 
                                 <ul>
+                                    <li><Link to="/user-guide">Getting Started</Link></li>
                                     {appState.repos.documentation_tree.li.map( (res) => (
                                         <li id={res["@attributes"].class.match(/\d+/)} className={res["@attributes"].class.includes(childAttribute) ? "list-head": null}
                                         onClick={(event) => guideClicked(event, res["@attributes"].class.match(/\d+/))}>{res.a}

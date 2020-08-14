@@ -24,7 +24,6 @@ function filtering(data, id) {
 function navigation(id) {
     navigate(`?pageId=${id}`)
     $('li').removeClass('selected')
-    $('ul').addClass('collapse')
     $(`#`+id).children().removeClass('collapse').addClass('arrow');
     $(`#`+id).parents().removeClass('collapse').addClass('arrow');
     $(`#`+id).addClass('selected')
