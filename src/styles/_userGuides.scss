@@ -12,10 +12,10 @@
         transition: all 250ms ease-in-out;
         cursor: pointer;
     }
-    .link {
-        a { text-decoration: none; color: black}
-    }
 }
+        .link {
+            a { text-decoration: none; color: black}
+        }
 
 .selected {
     font-weight: 700;
