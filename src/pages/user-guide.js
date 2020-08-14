@@ -82,7 +82,7 @@ export default function UserGuide({ data }) {
                 <Container fluid  >
                     <Row>
                         <Col>
-                            <h1>User Guides</h1>
+                            <h1 className="link"><Link to="/user-guide">User Guides</Link></h1>
                         </Col>
                         <Col className="search">
                             <div className="form">
